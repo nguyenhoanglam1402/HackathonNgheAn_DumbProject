@@ -1,0 +1,44 @@
+.column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh);
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form {
+  width: 65%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.image-login {
+  flex: 55%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.content {
+  flex: 45%;
+  background-color: #f7f7f7;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
