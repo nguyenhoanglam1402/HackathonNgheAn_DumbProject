@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap%27');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.form-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+.form-register{
+    display:  block;
+}
+.form-title-register{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 10px 20px 10px;
+}
+.form-inputs{    
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px  10px 10px;
+    justify-content: center;
+}
+.form-input{  
+    max-width: 120%;
+    min-width: 90%;
+    align-self: center;
+    outline: none;  
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid rgb(133, 133, 133);
+    letter-spacing: 1.3px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+.form-input:focus{
+    border: 2px solid #169741;
+    color: #169741;
+    outline: none;
+}
+.form-login{
+    margin: 0px 0px 0px 50px;
+    font-size: 15px;
+    padding: 0px 0px 5px 10px;
+
+}
+.checking-role{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 60px 10px 60px;    
+}   
+.outside-radio{
+    display: flex;
+    justify-content: center;
+    padding: 5px 2px 5px 2px;
+    margin: 0px 3px 0px 3px;
+}    
+.check-radio{
+    align-self: center;
+    margin: 3px 5px 0px 0px;
+}
+.check-radio:focus{
+    outline: none;
+}
+.submit-zone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 0px 5px 0px;
+}
+.form-input-btn{
+    justify-content: center;
+    margin: 0px 15px 5px 15px;
+    background:  #169741;
+    color: #fff;
+}
+.form-input-btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
+    transition: 0.5s;
+}
+.form-input-btn:focus{
+    border-radius: 10px;
+    outline: none;
+}
+.form-input-login{
+    margin: 20px 0px 0px 0px;
+    color: rgba(0,0,0,0.6);
+}
+.radio-label{
+    color: rgba(0,0,0,0.7);
+}
+.watermark {
+    font-family: "Quicksand", sans-serif;
+    color: rgb(133, 133, 133);
+}
+.change-link{
+    padding-left: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #169741;
+}
+  
