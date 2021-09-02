@@ -1,0 +1,76 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.form-login-component {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-around;
+}
+
+.remember-me-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#password,
+#username {
+  display: block;
+  font-size: 17px;
+  padding: 15px 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid rgb(133, 133, 133);
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 1.3px;
+}
+
+#password:focus,
+#username:focus {
+  border: 2px solid #169741;
+  color: #169741;
+  outline: none;
+}
+
+#lable-checkbox {
+  font-family: "Quicksand", sans-serif;
+}
+
+#remember-me-checkbox {
+  height: 15px;
+  width: 15px;
+  background-color: #169741;
+}
+
+.btn-login {
+  color: white;
+  background-color: #169741;
+}
+
+.forget-link {
+  font-family: "Quicksand", sans-serif;
+}
+
+.username-block {
+  display: inline;
+  width: -webkit-fill-available;
+  position: relative;
+}
+
+.btn-login:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.watermark {
+  font-family: "Quicksand", sans-serif;
+  color: rgb(133, 133, 133);
+}
