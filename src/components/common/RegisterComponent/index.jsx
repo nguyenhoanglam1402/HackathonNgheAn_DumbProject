@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 const registerComponent = () => {
   return (
     <div className="form-container">
@@ -65,27 +65,27 @@ const registerComponent = () => {
         {/* Kiem tra vai tro */}
         <span className="form-input-login">Vai trò của bạn là:</span>
         <div className="checking-role">
-          <div class="outside-radio">           
+          <div class="outside-radio">
             <input
-                    id="radio-box-register1"
-                    name="radio-box"
-                    type="radio"
-                    className="check-radio"
-                  /> 
-            <label htmlFor="radio-box-register1" className="radio-label">              
-                Nông dân
-            </label>          
+              id="radio-box-register1"
+              name="radio-box"
+              type="radio"
+              className="check-radio"
+            />
+            <label htmlFor="radio-box-register1" className="radio-label">
+              Nông dân
+            </label>
           </div>
 
           <div class="outside-radio">
             <input
-                    id="radio-box-register2"
-                    name="radio-box"
-                    type="radio"
-                    className="check-radio"
-                  />
+              id="radio-box-register2"
+              name="radio-box"
+              type="radio"
+              className="check-radio"
+            />
             <label htmlFor="radio-box-register2" className="radio-label">
-                Công ty
+              Công ty
             </label>
           </div>
         </div>
@@ -96,11 +96,9 @@ const registerComponent = () => {
             Đăng ký
           </button>
           <span className="form-input-login">
-            Bạn đã có tài khoản? Đăng nhập  
+            Bạn đã có tài khoản? Đăng nhập
             <Router>
-              <Link className="change-link">
-                tại đây
-              </Link>
+              <Link className="change-link">tại đây</Link>
             </Router>
           </span>
         </div>

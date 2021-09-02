@@ -76,6 +76,10 @@ h1 {
   font-weight: 600;
 }
 
+#lable-checkbox {
+  margin-left: 5px;
+}
+
 .link {
   color: val(--green-tea);
   margin-left: 5px;
