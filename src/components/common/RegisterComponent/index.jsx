@@ -1,68 +1,103 @@
 import React from "react";
 import "./style.css";
 import { Link, BrowserRouter as Router } from "react-router-dom";
-const registerComponent = () => {
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+//Schema
+const signUpSchema = yup.object().shape({
+  fullName: yup.string().required(),
+  userName: yup.string().required(),
+  email: yup.string().email().required(),
+  password: yup.string().required(),
+  confirmPassword: yup.string().oneOf([yup.ref("password"), null]).required(),
+  phoneNumber: yup.number().positive().integer().required(),
+  role: yup.string().required(), 
+});
+
+
+const RegisterComponent = () => {
+  const {register, handleSubmit, formState:{errors}} = useForm({
+    resolver: yupResolver(signUpSchema)
+  });
+  const onRegister = (data) =>{
+    console.log(data);
+  }
   return (
     <div className="form-container">
-      <form className="form-register" action="">
+      <form className="form-register" onSubmit={handleSubmit(onRegister)}>
         <h1 className="form-title-register">Đăng ký</h1>
+
         {/* Ten nguoi dung */}
         <div className="form-inputs">
           <input
-            name="name"
+            name="fullName"
             type="text"
             className="form-input"
             placeholder="Họ và tên"
-            required
+            {...register("fullName")}
           />
         </div>
-
-        {/* Ten dang nhap */}
+        <p>{errors.fullName?.message}</p>
+{/*
+        
         <div className="form-inputs">
           <input
-            name="username"
+            name="userName"
             type="text"
             className="form-input"
-            placeholder="Tên đăng nhập:"
-            required
+            placeholder="Tên đăng nhập"
+            {...register("userName",{required: true})}
+          />
+        </div>
+        <p>{errors.userName?.message}</p>
+
+        
+        <div className="form-inputs">
+          <input
+            name="email"
+            type="email"
+            className="form-input"
+            placeholder="Email"
+            {...register("email",{required: true})}
           />
         </div>
 
-        {/* Mat khau */}
+        
         <div className="form-inputs">
           <input
             name="password"
             type="password"
             className="form-input"
             placeholder="Mật khẩu"
-            required
+            {...register("password", {required: true, minLength: 8})}
           />
         </div>
 
-        {/* Nhap lai mat khau */}
+        
         <div className="form-inputs">
           <input
-            name="re-password"
+            name="confirmPassword"
             type="password"
             className="form-input"
             placeholder="Nhập lại mật khẩu"
-            required
+            {...register("confirmPassword",{required: true, minLength: 8})}
           />
         </div>
 
-        {/* so dien thoai */}
+        
         <div className="form-inputs">
           <input
-            name="phone-number"
+            name="phoneNumber"
             type="tel"
             className="form-input"
-            maxLength="10"
             placeholder="Số điện thoại"
-            required
+            {...register("phoneNumber",{required: true, minLength: 10, maxLength: 10})}
           />
         </div>
 
-        {/* Kiem tra vai tro */}
+        
         <span className="form-input-login">Vai trò của bạn là:</span>
         <div className="checking-role">
           <div class="outside-radio">
@@ -75,23 +110,42 @@ const registerComponent = () => {
             <label htmlFor="radio-box-register1" className="radio-label">
               Nông dân
             </label>
+          <div className="outside-radio">           
+            <input
+                    value="Farmer"
+                    id="radio-box-register1"
+                    name="role"
+                    type="radio"
+                    className="check-radio"
+                    {...register("radio")}
+                  /> 
+            <label htmlFor="radio-box-register1" className="radio-label">              
+                Nông dân
+            </label>          
           </div>
 
-          <div class="outside-radio">
+          <div className="outside-radio">
             <input
               id="radio-box-register2"
               name="radio-box"
               type="radio"
               className="check-radio"
             />
+                    value="Company"
+                    id="radio-box-register2"
+                    name="role"
+                    type="radio"
+                    className="check-radio"
+                    {...register("radio")}
+                  />
             <label htmlFor="radio-box-register2" className="radio-label">
               Công ty
             </label>
           </div>
         </div>
-
-        {/* submission */}
-        <div class="submit-zone">
+*/}
+        
+        <div className="submit-zone">
           <button className="btn form-input-btn" type="submit">
             Đăng ký
           </button>
@@ -99,6 +153,9 @@ const registerComponent = () => {
             Bạn đã có tài khoản? Đăng nhập
             <Router>
               <Link className="change-link">tại đây</Link>
+              <Link to="/#" className="change-link">
+                tại đây
+              </Link>
             </Router>
           </span>
         </div>
@@ -108,4 +165,4 @@ const registerComponent = () => {
   );
 };
 
-export default registerComponent;
+export default RegisterComponent;
