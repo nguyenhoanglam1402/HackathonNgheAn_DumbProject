@@ -6,7 +6,7 @@
 
 h1 {
   text-align: center;
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--global-font);
 }
 
 .form-login-component {
@@ -29,20 +29,20 @@ h1 {
   padding: 15px 10px;
   font-weight: bold;
   border-radius: 10px;
-  border: 2px solid rgb(133, 133, 133);
-  font-family: "Quicksand", sans-serif;
+  border: 2px solid #b7b7b7;
+  font-family: var(--global-font);
   letter-spacing: 1.3px;
 }
 
 #password:focus,
 #username:focus {
-  border: 2px solid #169741;
-  color: #169741;
+  border: 2px solid var(--green-tea);
+  color: var(--green-tea);
   outline: none;
 }
 
 #lable-checkbox {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--global-font);
 }
 
 #remember-me-checkbox {
@@ -53,11 +53,11 @@ h1 {
 
 .btn-login {
   color: white;
-  background-color: #169741;
+  background-color: var(--green-tea);
 }
 
 .forget-link {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--global-font);
 }
 
 .username-block {
@@ -70,7 +70,26 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.register-link {
+  font-family: var(--global-font);
+  color: #b7b7b7;
+  font-weight: 600;
+}
+
+.link {
+  color: val(--green-tea);
+  margin-left: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:focus {
+  color: var(--green-tea);
+}
+
 .watermark {
-  font-family: "Quicksand", sans-serif;
-  color: rgb(133, 133, 133);
+  margin-top: 20px;
+  font-family: var(--global-font);
+  font-weight: 600;
+  color: #b7b7b7;
 }

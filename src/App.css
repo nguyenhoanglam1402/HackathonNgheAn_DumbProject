@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap%27");
+
+:root {
+  /* Global color */
+  --green-tea: #169741;
+
+  /* Global font */
+  --global-font: "Quicksand", sans-serif;
+}
 
 html {
   height: 100%;
