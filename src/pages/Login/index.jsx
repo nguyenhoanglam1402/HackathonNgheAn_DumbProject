@@ -12,7 +12,6 @@ const loginPage = () => {
           <div className="form-login">
             <img className="image-login" src={image} alt="" />
             <div className="content">
-
               <LoginComponent />
             </div>
           </div>
