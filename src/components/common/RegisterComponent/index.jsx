@@ -4,6 +4,11 @@ import { Link, BrowserRouter as Router } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import app from "../../../firebase"
+
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+
 
 //Schema
 const signUpSchema = yup.object().shape({
@@ -22,11 +27,24 @@ const RegisterComponent = () => {
     resolver: yupResolver(signUpSchema)
   });
   const onRegister = (data) =>{
+    const {email, password} = data;
+    const auth = getAuth(app);
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
     console.log(data);
   }
+  const onError = (errors) => console.log(errors);
   return (
     <div className="form-container">
-      <form className="form-register" onSubmit={handleSubmit(onRegister)}>
+      <form className="form-register" onSubmit={handleSubmit(onRegister,onError)}>
         <h1 className="form-title-register">Đăng ký</h1>
 
         {/* Ten nguoi dung */}
@@ -40,7 +58,7 @@ const RegisterComponent = () => {
           />
         </div>
         <p>{errors.fullName?.message}</p>
-{/*
+
         
         <div className="form-inputs">
           <input
@@ -100,50 +118,35 @@ const RegisterComponent = () => {
         
         <span className="form-input-login">Vai trò của bạn là:</span>
         <div className="checking-role">
-          <div class="outside-radio">
+        <div className="outside-radio">           
             <input
+              value="Farmer"
               id="radio-box-register1"
-              name="radio-box"
+              name="role"
               type="radio"
               className="check-radio"
-            />
-            <label htmlFor="radio-box-register1" className="radio-label">
-              Nông dân
-            </label>
-          <div className="outside-radio">           
-            <input
-                    value="Farmer"
-                    id="radio-box-register1"
-                    name="role"
-                    type="radio"
-                    className="check-radio"
-                    {...register("radio")}
-                  /> 
+              {...register("role")}
+            /> 
             <label htmlFor="radio-box-register1" className="radio-label">              
                 Nông dân
-            </label>          
+            </label>   
+                 
           </div>
 
           <div className="outside-radio">
             <input
+              value="Company"
               id="radio-box-register2"
-              name="radio-box"
+              name="role"
               type="radio"
               className="check-radio"
+              {...register("role")}
             />
-                    value="Company"
-                    id="radio-box-register2"
-                    name="role"
-                    type="radio"
-                    className="check-radio"
-                    {...register("radio")}
-                  />
             <label htmlFor="radio-box-register2" className="radio-label">
               Công ty
             </label>
           </div>
         </div>
-*/}
         
         <div className="submit-zone">
           <button className="btn form-input-btn" type="submit">
@@ -152,7 +155,6 @@ const RegisterComponent = () => {
           <span className="form-input-login">
             Bạn đã có tài khoản? Đăng nhập
             <Router>
-              <Link className="change-link">tại đây</Link>
               <Link to="/#" className="change-link">
                 tại đây
               </Link>

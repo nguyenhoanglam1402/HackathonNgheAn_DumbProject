@@ -1,12 +1,9 @@
 import { React } from "react";
 import "./style.css";
 import image from "../../assets/images/Login.png";
-<<<<<<< HEAD
 import { LoginComponent } from "../../components/common";
-=======
 import {RegisterComponent } from "../../components/common";
 
->>>>>>> 6826fa6... update(RegisterComponent): update logic for register
 
 const loginPage = () => {
   return (
@@ -18,7 +15,7 @@ const loginPage = () => {
               <img className="image-login" src={image} alt="" />
             </div>
             <div className="content">
-              <LoginComponent />
+              <RegisterComponent />
             </div>
           </div>
         </div>
