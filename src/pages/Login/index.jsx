@@ -9,7 +9,9 @@ const loginPage = () => {
       <div className="row-container">
         <div className="form">
           <div className="form-login">
-            <img className="image-login" src={image} alt="" />
+            <div className="image-block">
+              <img className="image-login" src={image} alt="" />
+            </div>
             <div className="content">
               <LoginComponent />
             </div>
