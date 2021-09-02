@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap%27");
+
 html {
   height: 100%;
   background-color: #ffffff;
@@ -6,4 +8,15 @@ html {
 .App {
   text-align: center;
   height: 100%;
+}
+
+.btn {
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  color: black;
+  margin-top: 15px;
 }

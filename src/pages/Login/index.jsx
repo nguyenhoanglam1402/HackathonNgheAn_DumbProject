@@ -1,6 +1,7 @@
 import { React } from "react";
 import "./style.css";
 import image from "../../assets/images/Login.png";
+import { LoginComponent } from "../../components/common";
 
 const loginPage = () => {
   return (
@@ -9,7 +10,9 @@ const loginPage = () => {
         <div className="form">
           <div className="form-login">
             <img className="image-login" src={image} alt="" />
-            <div className="content"></div>
+            <div className="content">
+              <LoginComponent />
+            </div>
           </div>
         </div>
       </div>
