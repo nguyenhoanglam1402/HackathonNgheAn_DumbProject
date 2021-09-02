@@ -1,7 +1,7 @@
 import { React } from "react";
 import "./style.css";
 import image from "../../assets/images/Login.png";
-import { LoginComponent } from "../../components/common";
+import { LoginComponent, RegisterComponent } from "../../components/common";
 
 
 const loginPage = () => {
@@ -12,7 +12,7 @@ const loginPage = () => {
           <div className="form-login">
             <img className="image-login" src={image} alt="" />
             <div className="content">
-              <LoginComponent />
+              <RegisterComponent/>
             </div>
           </div>
         </div>

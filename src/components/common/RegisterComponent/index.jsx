@@ -8,7 +8,6 @@ const registerComponent = () => {
                 {/* Ten nguoi dung */}
                 <div className="form-inputs">
                     <input 
-                        id="name"
                         name="name"
                         type="text"
                         className="form-input" 
@@ -18,7 +17,6 @@ const registerComponent = () => {
                 {/* Ten dang nhap */}
                 <div className="form-inputs">
                     <input 
-                        id="username"
                         name="username"
                         type="text"
                         className="form-input" 
@@ -28,7 +26,6 @@ const registerComponent = () => {
                 {/* Mat khau */}
                 <div className="form-inputs">
                     <input 
-                        id="password"
                         name="password"
                         type="password"
                         className="form-input" 
@@ -38,7 +35,6 @@ const registerComponent = () => {
                 {/* Nhap lai mat khau */}
                 <div className="form-inputs">
                     <input 
-                        id="re-password"
                         name="re-password"
                         type="password"
                         className="form-input" 
@@ -48,7 +44,6 @@ const registerComponent = () => {
                 {/* so dien thoai */}
                 <div className="form-inputs">
                     <input 
-                        id="phone-number"
                         name="phone-number"
                         type="tel"
                         className="form-input" 
@@ -99,6 +94,7 @@ const registerComponent = () => {
                         Bạn đã có tài khoản? Đăng nhập <a href="#">tại đây</a>
                     </span>
                 </div>
+                <p className="watermark">Made by BestOrNothing Team</p>
             </form>
         </div>
     )

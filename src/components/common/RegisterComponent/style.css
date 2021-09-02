@@ -31,12 +31,17 @@
     max-width: 100%; 
     min-width: 65%; 
     align-self: center;
-    outline: none;
+    outline: none;  font-weight: bold;
     border-radius: 10px;
     border: 2px solid rgb(133, 133, 133);
-    background: #fff;
+    letter-spacing: 1.3px;
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
+}
+.form-input:focus{
+    border: 2px solid #169741;
+    color: #169741;
+    outline: none;
 }
 .form-login{
     margin: 0px 0px 0px 50px;
@@ -76,3 +81,8 @@
     border-radius: 10px;
     outline: none;
 }
+.watermark {
+    font-family: "Quicksand", sans-serif;
+    color: rgb(133, 133, 133);
+  }
+  
