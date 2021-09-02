@@ -6,7 +6,7 @@ const login = () => {
   return (
     <div>
       <div className="login-container">
-        <h1>Đăng nhập để tiếp tục</h1>
+        <h1>Đăng nhập</h1>
         <div className="form-login-component">
           <input
             type="email"
@@ -37,7 +37,16 @@ const login = () => {
         </div>
         <button className="btn btn-login">Đăng nhập</button>
       </div>
-      <p className="watermark">Made by BestOrNothing Team</p>
+      <Router>
+        <p className="register-link">
+          Nếu chưa có tài khoản.
+          <Link className="link" to="#">
+            Đăng ký tại đây
+          </Link>
+        </p>
+      </Router>
+
+      <p className="watermark">Made by BestRNothing Team</p>
     </div>
   );
 };
