@@ -1,8 +1,7 @@
 import { React } from "react";
 import "./style.css";
 import image from "../../assets/images/Login.png";
-import { LoginComponent, RegisterComponent } from "../../components/common";
-
+import { LoginComponent } from "../../components/common";
 
 const loginPage = () => {
   return (
@@ -14,7 +13,7 @@ const loginPage = () => {
               <img className="image-login" src={image} alt="" />
             </div>
             <div className="content">
-              <RegisterComponent/>
+              <LoginComponent />
             </div>
           </div>
         </div>
