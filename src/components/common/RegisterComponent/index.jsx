@@ -2,16 +2,11 @@ import React from 'react'
 import './style.css'
 const registerComponent = () => {
     return (
-        <div className="form-content">
+        <div className="form-container">
             <form className="form-register" action="">
                 <h1 className="form-title-register">Đăng ký</h1>
                 {/* Ten nguoi dung */}
                 <div className="form-inputs">
-                    <label 
-                        htmlFor="name"
-                        className="form-label">
-                        Họ và tên: 
-                    </label>
                     <input 
                         id="name"
                         name="name"
@@ -22,11 +17,6 @@ const registerComponent = () => {
 
                 {/* Ten dang nhap */}
                 <div className="form-inputs">
-                    <label 
-                        htmlFor="username"
-                        className="form-label">
-                        Tên đăng nhập: 
-                    </label>
                     <input 
                         id="username"
                         name="username"
@@ -37,11 +27,6 @@ const registerComponent = () => {
 
                 {/* Mat khau */}
                 <div className="form-inputs">
-                    <label 
-                        htmlFor="password"
-                        className="form-label">
-                        Mật khẩu:  
-                    </label>
                     <input 
                         id="password"
                         name="password"
@@ -52,11 +37,6 @@ const registerComponent = () => {
 
                 {/* Nhap lai mat khau */}
                 <div className="form-inputs">
-                    <label 
-                        htmlFor="re-password"
-                        className="form-label">
-                        Nhập lại mật khẩu:  
-                    </label>
                     <input 
                         id="re-password"
                         name="re-password"
@@ -67,11 +47,6 @@ const registerComponent = () => {
 
                 {/* so dien thoai */}
                 <div className="form-inputs">
-                    <label 
-                        htmlFor="phone-number"
-                        className="form-label">
-                        Số điện thoại: 
-                    </label>
                     <input 
                         id="phone-number"
                         name="phone-number"
@@ -86,39 +61,44 @@ const registerComponent = () => {
                     Vai trò của bạn là: 
                 </span>
                 <div className="checking-role">
-                    <label 
-                        htmlFor="radio-box-register"
-                        className="radio-label">
-                        Nông dân: 
-                    </label>
-                    <input 
-                        id="radio-box-register"
-                        name="radio-box"
-                        type="radio" 
-                        className="check-radio"/>
-
+                    <div class="outside-radio">
+                        <label 
+                            htmlFor="radio-box-register"
+                            className="radio-label">
+                            Nông dân: 
+                        </label>
+                        <input 
+                            id="radio-box-register"
+                            name="radio-box"
+                            type="radio" 
+                            className="check-radio"/>
+                    </div>
                     
-                    <label 
-                        htmlFor="radio-box-register"
-                        className="radio-label">
-                        Công ty: 
-                    </label>
-                    <input 
-                        id="radio-box-register"
-                        name="radio-box"
-                        type="radio" 
-                        className="check-radio"/>
+                    <div class="outside-radio">
+                        <label 
+                            htmlFor="radio-box-register"
+                            className="radio-label">
+                            Công ty: 
+                        </label>
+                        <input 
+                            id="radio-box-register"
+                            name="radio-box"
+                            type="radio" 
+                            className="check-radio"/>
+                    </div>
                 </div>
                 
                 {/* submission */}
-                <button 
-                    className="form-input-btn"
-                    type="submit">
-                    Submit
-                </button>
-                <span className="form-input-login">
-                    Already have an account? Login <a href="#">here</a>
-                </span>
+                <div class="submit-zone">
+                    <button 
+                        className="form-input-btn"
+                        type="submit">
+                        Submit
+                    </button>
+                    <span className="form-input-login">
+                        Bạn đã có tài khoản? Đăng nhập <a href="#">tại đây</a>
+                    </span>
+                </div>
             </form>
         </div>
     )

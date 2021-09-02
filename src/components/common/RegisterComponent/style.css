@@ -6,10 +6,6 @@
     margin: 0;
     font-family: 'Quicksand', sans-serif;
 }
-
-body{
-    height: 100%;
-}
 .form-container{
     display: flex;
     width: 100%;
@@ -28,14 +24,55 @@ body{
 .form-inputs{    
     display: flex;
     flex-direction: column;
-    padding: 10px 10px  20px 10px;
+    padding: 5px 10px  10px 10px;
     justify-content: center;
 }
 .form-input{  
     max-width: 100%; 
-    min-width: 70%; 
+    min-width: 65%; 
     align-self: center;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid rgb(133, 133, 133);
+    background: #fff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
 }
-.form-label{
+.form-login{
     margin: 0px 0px 0px 50px;
+    font-size: 15px;
+    padding: 0px 0px 5px 10px;
+
+}
+.checking-role{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 60px 15px 60px;    
+}   
+.outside-radio{
+    display: flex;
+    justify-content: center;
+    padding: 5px 2px 5px 2px;
+    margin: 0px 3px 0px 3px;
+}    
+.check-radio{
+    align-self: center;
+    margin: 3px 0px 0px 5px;
+}
+.submit-zone{
+    display: flex;
+    flex-direction: column;
+}
+.form-input-btn{
+    margin: 0px 120px 20px 120px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    background:  #169741;
+}
+.form-input-btn:focus{
+    border-radius: 10px;
+    outline: none;
 }
