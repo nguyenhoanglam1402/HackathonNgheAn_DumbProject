@@ -6,9 +6,14 @@ import app from "../../../firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { signIn } from "../../../actions/user";
+import { useSelector } from "react-redux";
 
 const Login = () => {
   const userDispatch = useDispatch();
+  const selector = useSelector((store) => store.user);
+
+  console.log(selector);
+
   const { register, handleSubmit } = useForm({
     defaultValues: {
       username: "",

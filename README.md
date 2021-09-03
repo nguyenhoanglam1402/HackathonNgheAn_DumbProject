@@ -6,6 +6,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `redux-thunk` and `redux-devtools-extension`
+
+> Must to add these dependencies before run the this app.
+
+### React Developer Tools and Redux DevTools
+
+> Must to install these extensions if you wanna test the app
+
 ### `yarn start`
 
 Runs the app in the development mode.\
