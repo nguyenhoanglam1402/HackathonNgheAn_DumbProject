@@ -2,6 +2,7 @@
 
 # evironment variables
 .env
+/public/env.js
 
 # dependencies
 /node_modules
