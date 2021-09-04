@@ -27,16 +27,18 @@ h1 {
   display: block;
   font-size: 17px;
   padding: 15px 10px;
+  outline: nonr;
+  border: none;
   font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid #b7b7b7;
+  border-bottom: 2px solid #b7b7b7;
   font-family: var(--global-font);
   letter-spacing: 1.3px;
 }
 
 #password:focus,
 #username:focus {
-  border: 2px solid var(--green-tea);
+  border: none;
+  border-bottom: 2px solid var(--green-tea);
   color: var(--green-tea);
   outline: none;
 }
@@ -58,6 +60,8 @@ h1 {
 
 .forget-link {
   font-family: var(--global-font);
+  text-decoration: none;
+  color: var(--green-tea);
 }
 
 .username-block {
@@ -81,7 +85,7 @@ h1 {
 }
 
 .link {
-  color: val(--green-tea);
+  color: var(--green-tea);
   margin-left: 5px;
   font-weight: 600;
   text-decoration: none;

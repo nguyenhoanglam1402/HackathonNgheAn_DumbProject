@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -158,11 +158,9 @@ const RegisterComponent = () => {
           </button>
           <span className="form-input-login">
             Bạn đã có tài khoản? Đăng nhập
-            <Router>
-              <Link to="/#" className="change-link">
+              <Link to="/login" className="change-link">
                 tại đây
               </Link>
-            </Router>
           </span>
         </div>
         <p className="watermark">Made by BestRNothing Team</p>
