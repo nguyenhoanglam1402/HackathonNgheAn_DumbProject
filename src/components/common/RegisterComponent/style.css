@@ -18,8 +18,8 @@
 }
 .form-title-register{
     text-align: center;
-    font-size: 25px;
-    padding: 10px 10px 20px 10px;
+    font-size: 35px;
+    padding: 3px 10px 15px 10px;
 }
 .form-inputs{    
     display: flex;
@@ -28,20 +28,21 @@
     justify-content: center;
 }
 .form-input{  
-    max-width: 120%;
-    min-width: 90%;
+    max-width: 110%;
+    min-width: 100%;
     align-self: center;
-    outline: none;  
+    outline: none;
+    border: none;
+    font-size: 15px;
+    border-bottom: 2px solid #b7b7b7;  
     font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid rgb(133, 133, 133);
     letter-spacing: 1.3px;
     padding: 10px 10px 10px 10px;
-    border-radius: 10px;
 }
 .form-input:focus{
-    border: 2px solid #169741;
-    color: #169741;
+    border: none;
+    border-bottom: 2px solid var(--green-tea);
+    color: var(--green-tea);
     outline: none;
 }
 .checking-role{
@@ -49,7 +50,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 60px 10px 60px;    
+    margin: 5px 60px 10px 60px;    
 }   
 .outside-radio{
     display: flex;
@@ -72,8 +73,11 @@
 }
 .form-input-btn{
     justify-content: center;
-    margin: 0px 15px 5px 15px;
-    background:  #169741;
+    min-width: 100%;
+    text-align: center;
+    font-size: 25px;
+    margin: 0px 0px 5px 0px;
+    background:  var(--green-tea);
     font-size: 18px;
     color: #fff;
 }
@@ -82,18 +86,17 @@
     transition: 0.5s;
 }
 .form-input-btn:focus{
-    border-radius: 10px;
     outline: none;
 }
 .form-input-login{
-    margin: 20px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
     color: rgba(0,0,0,0.6);
 }
 .radio-label{
     color: rgba(0,0,0,0.7);
 }
 .watermark {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--global-font);
   color: rgb(133, 133, 133);
 }
 .change-link {

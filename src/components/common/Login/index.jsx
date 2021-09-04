@@ -82,14 +82,12 @@ const Login = () => {
           Đăng nhâp
         </button>
       </div>
-      <Router>
         <p className="register-link">
           Nếu chưa có tài khoản.
-          <Link className="link" to="#">
+          <Link className="link" to="/register">
             Đăng ký tai đây
           </Link>
         </p>
-      </Router>
 
       <p className="watermark">Made by BestRNothing Team</p>
     </form>
