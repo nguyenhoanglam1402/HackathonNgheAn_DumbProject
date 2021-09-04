@@ -2,17 +2,13 @@ import { React } from "react";
 import { useForm } from "react-hook-form";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import "./style.css";
-import app from "../../../firebase";
+import app from "firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
-import { signIn } from "../../../actions/user";
-import { useSelector } from "react-redux";
+import { signIn } from "actions/user";
 
 const Login = () => {
   const userDispatch = useDispatch();
-  const selector = useSelector((store) => store.user);
-
-  console.log(selector);
 
   const { register, handleSubmit } = useForm({
     defaultValues: {
