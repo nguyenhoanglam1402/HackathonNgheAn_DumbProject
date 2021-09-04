@@ -55,7 +55,6 @@ const RegisterComponent = () => {
       >
         <h1 className="form-title-register">Đăng ký</h1>
 
-        {/* Ten nguoi dung */}
         <div className="form-inputs">
           <input
             name="fullName"
