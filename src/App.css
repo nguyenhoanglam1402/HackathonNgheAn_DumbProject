@@ -6,6 +6,9 @@
 
   /* Global font */
   --global-font: "Quicksand", sans-serif;
+
+  /* Global margin form container*/
+  --container-margin: 0 30px;
 }
 
 html {
@@ -26,4 +29,8 @@ html {
   font-weight: 600;
   color: black;
   margin-top: 15px;
+}
+
+.btn :hover {
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
 }

@@ -4,6 +4,14 @@
   justify-content: space-evenly;
   color: transparent;
   position: sticky;
+  height: 90px;
+  margin: var(--container-margin);
+}
+
+.logo-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nav-menu {
@@ -27,20 +35,19 @@
 
 .logo-brand-image {
   height: 50px;
+  margin-bottom: 15px;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--green-tea);
   font-size: 20px;
+  padding: 10px 0;
+  width: 150px;
 }
 
 .nav-item:active {
   color: var(--green-tea);
-}
-
-.nav-item:hover {
-  background-color: var(--green-tea);
 }
 
 .nav-item:hover .nav-link {
