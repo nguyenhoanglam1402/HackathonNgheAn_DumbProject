@@ -1,0 +1,70 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: transparent;
+  position: sticky;
+  height: 90px;
+  margin: var(--container-margin);
+}
+
+.logo-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.nav-item {
+  display: flex;
+  height: 100%;
+  width: 150px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-menu-group {
+  width: fit-content;
+}
+
+.logo-brand-image {
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--green-tea);
+  font-size: 20px;
+  padding: 10px 0;
+  width: 150px;
+}
+
+.nav-item:active {
+  color: var(--green-tea);
+}
+
+.nav-item:hover .nav-link {
+  background-color: var(--green-tea);
+  color: white;
+}
+
+.sign-in {
+  background-color: var(--green-tea);
+  color: white;
+  padding: 10px 20px;
+  font-family: var(--global-font);
+  margin: 0;
+}
+
+.sign-in-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
