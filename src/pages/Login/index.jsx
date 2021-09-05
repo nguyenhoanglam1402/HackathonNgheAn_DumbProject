@@ -4,7 +4,7 @@ import image from "assets/images/Login.png";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { LoginComponent, RegisterComponent } from "components/common";
 
-const loginPage = () => {
+const LoginPage = () => {
   return (
     <div className="column-container">
       <div className="row-container">
@@ -28,4 +28,4 @@ const loginPage = () => {
   );
 };
 
-export default loginPage;
+export default LoginPage;
