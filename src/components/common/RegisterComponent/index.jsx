@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import app from "firebase";
+import firebase from "firebase";
 
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -32,7 +32,7 @@ const RegisterComponent = () => {
   });
   const onRegister = (data) => {
     const { email, password } = data;
-    const auth = getAuth(app);
+    const auth = getAuth(firebase);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
@@ -158,9 +158,9 @@ const RegisterComponent = () => {
           </button>
           <span className="form-input-login">
             Bạn đã có tài khoản? Đăng nhập
-              <Link to="/login" className="change-link">
-                tại đây
-              </Link>
+            <Link to="/login" className="change-link">
+              tại đây
+            </Link>
           </span>
         </div>
         <p className="watermark">Made by BestRNothing Team</p>
