@@ -9,6 +9,10 @@
 
   /* Global margin form container*/
   --container-margin: 0 30px;
+
+  --phone-size: 600px;
+  --tablet-size: 700px;
+  --destop-size: 1000px;
 }
 
 html {
