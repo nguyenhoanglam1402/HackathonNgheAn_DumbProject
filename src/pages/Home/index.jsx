@@ -4,7 +4,7 @@ import { NavigaionBar } from "../../components/common";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="home-container">
       <NavigaionBar />
       <Cards />
     </div>
