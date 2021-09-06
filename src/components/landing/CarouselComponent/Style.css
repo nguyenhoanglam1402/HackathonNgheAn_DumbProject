@@ -4,17 +4,14 @@
     font-family: var(--global-font);
 }
 .slide-container{
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
+    z-index: 0;
 }
 .slides{
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
 }
 .slide{
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: fill;
 }

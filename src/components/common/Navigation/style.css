@@ -12,6 +12,7 @@ nav {
   color: transparent;
   position: sticky;
   height: 90px;
+  z-index: 3;
   margin: var(--container-margin);
 }
 
