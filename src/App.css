@@ -30,7 +30,3 @@ html {
   color: black;
   margin-top: 15px;
 }
-
-.btn :hover {
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 8px;
-}
