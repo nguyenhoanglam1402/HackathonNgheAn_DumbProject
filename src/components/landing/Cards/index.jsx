@@ -7,8 +7,8 @@ const Cards = () => {
   const [list, setList] = useState([
     "Gạo",
     "Rau củ",
-    "Trái cây",
     "Ngũ cốc",
+    "Trái cây",
     "Cà phê",
   ]);
 
