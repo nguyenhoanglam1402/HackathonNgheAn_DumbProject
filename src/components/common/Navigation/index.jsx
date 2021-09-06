@@ -5,7 +5,7 @@ import "./style.css";
 
 const NavigaionBar = () => {
   return (
-    <div>
+    <nav>
       <div className="navbar">
         <div className="logo-brand">
           <img className="logo-brand-image" src={logo} alt={logo} />
@@ -33,7 +33,7 @@ const NavigaionBar = () => {
           <button className="sign-in btn">Đăng nhập</button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
