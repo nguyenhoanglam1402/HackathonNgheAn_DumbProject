@@ -4,7 +4,7 @@ import image from "assets/images/Login.png";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { LoginComponent, RegisterComponent } from "components/common";
 
-const loginPage = () => {
+const LoginPage = () => {
   return (
     <div className="column-container">
       <div className="row-container">
@@ -16,8 +16,8 @@ const loginPage = () => {
             <Router>
               <div className="content">
                 <Switch>
-                  <Route path="/login" component={LoginComponent} />
-                  <Route path="/register" component={RegisterComponent} />
+                  <Route path="/login" component={ LoginComponent }/>
+                  <Route path="/register" component={RegisterComponent}/>
                 </Switch>
               </div>
             </Router>
@@ -28,4 +28,4 @@ const loginPage = () => {
   );
 };
 
-export default loginPage;
+export default LoginPage;
