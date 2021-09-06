@@ -1,0 +1,46 @@
+nav {
+  position: fixed;
+  width: 100%;
+}
+
+.card-block {
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 250px;
+  height: 400px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  width: 260px;
+  height: 410px;
+  transition: 0.2s;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card-title {
+  font-family: var(--global-font);
+  color: var(--green-tea);
+  font-size: 20px;
+}
