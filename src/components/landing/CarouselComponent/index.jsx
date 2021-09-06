@@ -26,7 +26,7 @@ const CarouselComponent = () => {
                 <div className="slides">
                     <div className="slide-content">
                         <div className = "text">
-                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán.
+                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán
                         </div>
                         <button className="infor-link">                        
                             <Link to="/#" className="link" >
@@ -39,7 +39,7 @@ const CarouselComponent = () => {
                 <div className="slides">
                     <div className="slide-content">
                         <div className = "text">
-                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán.
+                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán
                         </div>
                         <button className="infor-link">                        
                             <Link to="/#" className="link" >
@@ -52,7 +52,7 @@ const CarouselComponent = () => {
                 <div className="slides">
                     <div className="slide-content">
                         <div className = "text">
-                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán.
+                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán
                         </div>
                         <button className="infor-link">                        
                             <Link to="/#" className="link" >
