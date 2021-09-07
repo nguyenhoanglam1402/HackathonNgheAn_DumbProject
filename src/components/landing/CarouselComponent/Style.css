@@ -1,63 +1,72 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: var(--global-font);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--global-font);
 }
-.slide-container{
-    z-index: 0;
+.slide-container {
+  z-index: 0;
 }
-.slide-content{
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 250px 0px 0px 120px;   
+.slide-content {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-.text{
-    font-family: var(--global-font);
-    font-size: 35px;
-    color: #fff;
+.text {
+  font-family: var(--global-font);
+  font-size: 35px;
+  padding: var(--container-margin);
+  color: #fff;
 }
-.infor-link{
-    font-family: var(--global-font);
-    font-size: 25px;
-    background: rgba(255, 255, 255, 0.4);
-    padding: 15px 15px 15px 15px;
-    width: 50%;
-    outline: none;
-    border: none;
-    margin-left: 160px;
+.infor-button {
+  font-family: var(--global-font);
+  background: rgba(255, 255, 255, 0.4);
+  padding: 15px 15px 15px 15px;
+  width: fit-content;
+  outline: none;
+  border: none;
 }
-.infor-link:focus{
-    font-size: 15px;
-    outline: none;
-    border: none;
+
+.infor-button:hover {
+  background-color: var(--green-tea);
 }
-.link{
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
+
+.infor-button:focus {
+  outline: none;
+  border: none;
 }
-.link:focus{
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
+.infor-button-content {
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
 }
-.link:active{
-    text-decoration: none;
-    font-size: 25px;
-    color: #fff;
+
+.button-block {
+  margin-top: 20px;
 }
-.slides{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+
+.infor-button-content:focus {
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
 }
-.slide{
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    filter: brightness(65%);
+.infor-button-content:active {
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+}
+.slides {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: brightness(65%);
 }

@@ -8,7 +8,7 @@
   --global-font: "Quicksand", sans-serif;
 
   /* Global margin form container*/
-  --container-margin: 0 30px;
+  --container-margin: 0 10%;
 
   --phone-size: 600px;
   --tablet-size: 700px;

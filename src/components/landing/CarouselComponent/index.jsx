@@ -1,13 +1,9 @@
-import { useState } from "react";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Style.css";
-import SlideItems from "./SlideItems";
-import pic1 from "assets/images/slide1.jpg";
-import pic2 from "assets/images/slide2.png";
-import pic3 from "assets/images/slide3.png";
+import "./style.css";
+import SlideItem from "./slide-item";
 
 const CarouselComponent = () => {
   let settings = {
@@ -16,36 +12,20 @@ const CarouselComponent = () => {
     speed: 2000,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 4500,
     csssEase: "linear",
     draggable: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
   };
-  const [list, setList] = useState([
-    {
-      picture: pic1,
-      description:
-        "Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán",
-    },
-    {
-      picture: pic2,
-      description:
-        "Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán",
-    },
-    {
-      picture: pic3,
-      description:
-        "Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán",
-    },
-  ]);
   return (
     <div className="slide-container">
       <Slider {...settings}>
-          {list.map((item,index)=>
-            <SlideItems picture={item.picture} description={item.description}/>
-          )}
+        <SlideItem description="Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn Dưa hấu không hạt ngon như gái 18 muốn bán. Sản phẩm đang ở chuẩn Flite 4" />
+        <SlideItem description="Nông dân Võ Ngọc Thành vừa đạt danh hiệu chăn rau sạch chuẩn Flite 5!" />
+        <SlideItem description="Tập đoàn đa quốc gia Nguyễn Lâm đang có nhu cầu thu mua rau sạch chuẩn Flite 5!" />
+        <SlideItem description="Thương lái TN. Qúy Ngọc đang cần 500 tấn ngũ cốc đạt chuẩn Flite 3" />
       </Slider>
     </div>
   );
