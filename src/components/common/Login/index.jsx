@@ -1,14 +1,14 @@
 import { React } from "react";
 import { useForm } from "react-hook-form";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link, BrowserRouter as Router, useHistory } from "react-router-dom";
 import "./style.css";
-import firebase from "firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { signIn } from "actions/user";
 
 const Login = () => {
   const userDispatch = useDispatch();
+  const history = useHistory();
 
   const { register, handleSubmit } = useForm({
     defaultValues: {
@@ -17,8 +17,12 @@ const Login = () => {
     },
   });
 
+  const redirect = (isSuccess) => {
+    if (isSuccess) history.push("/");
+  };
+
   const login = (data) => {
-    const auth = getAuth(firebase);
+    const auth = getAuth();
     signInWithEmailAndPassword(auth, data.username, data.password)
       .then((userCredential) => {
         const userResult = userCredential.user;
@@ -30,6 +34,7 @@ const Login = () => {
         };
         const loginAction = signIn(userInfo);
         userDispatch(loginAction);
+        redirect(true);
       })
       .catch((error) => {
         console.error(error);

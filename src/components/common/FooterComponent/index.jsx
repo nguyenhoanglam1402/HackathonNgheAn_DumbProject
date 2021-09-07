@@ -12,32 +12,32 @@ const FooterComponent = () => {
         </div>
         <div className="footer-about-container">
           <h2>Giới thiệu</h2>
-          <p class="text-about">
+          <p className="text-about">
             Flite được tạo ra với mục đích kết nối nhanh chóng giữa cung và cầu
             cho ngành nông nghiệp. Hân hạnh được phục vụ cho nhu cầu của bạn.
           </p>
         </div>
         <div className="footer-product-container">
           <h2>Sản phẩm</h2>
-          <li class="rice-footer">
+          <li className="rice-footer">
             <Link to={{ pathname: `/product/rice` }}>Gạo</Link>
           </li>
-          <li class="rice-footer">
+          <li className="rice-footer">
             <Link to={{ pathname: `/product/fruit` }}>Trái cây</Link>
           </li>
-          <li class="rice-footer">
+          <li className="rice-footer">
             <Link to={{ pathname: `/product/cafe` }}>Cà phê</Link>
           </li>
-          <li class="rice-footer">
+          <li className="rice-footer">
             <Link to={{ pathname: `/product/vegetable` }}>Rau củ</Link>
           </li>
-          <li class="rice-footer">
+          <li className="rice-footer">
             <Link to={{ pathname: `/product/crereals` }}>Ngũ côc</Link>
           </li>
         </div>
         <div className="footer-contact-container">
           <h2>Liên hệ</h2>
-          <div class="textwidget">
+          <div className="textwidget">
             22 Cách mạng tháng 8, Đà Nẵng
             <br />
             <a href="mailto:farmerlite@gmail.com">farmerlite@gmail.com</a>
@@ -52,7 +52,7 @@ const FooterComponent = () => {
         <div className="footer-contact-container">
           <p>
             &copy; Copyright 2021
-            <span class="sitename"> FarmerLite </span>|
+            <span className="sitename"> FarmerLite </span>|
             <a href="https://i.imgur.com/NTHTrYH.jpg"> BestRNothing Team</a>
           </p>
         </div>

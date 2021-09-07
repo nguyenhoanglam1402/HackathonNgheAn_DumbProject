@@ -2,8 +2,12 @@ import { React } from "react";
 import logo from "assets/icons/logo.png";
 import { Link } from "react-router-dom";
 import "./style.css";
+import { useSelector } from "react-redux";
+import defaultAvatar from "assets/images/avatar.png";
 
 const NavigaionBar = () => {
+  const store = useSelector((store) => store.user);
+
   return (
     <nav>
       <div className="navbar">
@@ -29,9 +33,28 @@ const NavigaionBar = () => {
             </li>
           </ul>
         </div>
-        <div className="sign-in-block">
-          <button className="sign-in btn">Đăng nhập</button>
-        </div>
+        {store.uid !== "" ? (
+          <div className="sign-in-block">
+            <div className="avatar-block">
+              <img
+                className="user-avatar"
+                src={defaultAvatar}
+                alt={defaultAvatar}
+              />
+              <div className="username-block">
+                <p className="username">{store.username}</p>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="sign-in-block">
+            <div className="login-button-block">
+              <Link to="login" className="sign-in btn">
+                Đăng nhập
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

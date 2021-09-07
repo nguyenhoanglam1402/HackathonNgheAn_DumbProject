@@ -20,6 +20,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 0 0 20%;
 }
 
 .nav-menu {
@@ -27,6 +28,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   height: 100%;
+  flex: 0 0 60%;
 }
 
 .nav-item {
@@ -43,6 +45,7 @@ nav {
 
 .logo-brand-image {
   height: 50px;
+  width: 80px;
   margin-bottom: 15px;
 }
 
@@ -75,4 +78,38 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 0 0 20%;
+}
+
+.user-avatar {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  border-radius: 50%;
+  border: 2px solid var(--green-tea);
+}
+
+.avatar-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.username-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+}
+
+.username {
+  color: var(--green-tea);
+  margin-left: 10px;
+  height: fit-content;
+}
+
+.login-button-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
