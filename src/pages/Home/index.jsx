@@ -1,14 +1,15 @@
-import { CarouselComponent } from "components/landing";
+import  CarouselComponent from "components/landing/CarouselComponent";
 import Cards from "components/landing/Cards";
 import { React } from "react";
-import { NavigaionBar } from "../../components/common";
+import { NavigaionBar, FooterComponent } from "components/common";
 
 const HomePage = () => {
   return (
     <div className="home-container">
       <NavigaionBar />
-      <CarouselComponent/>
+      <CarouselComponent />
       <Cards />
+      <FooterComponent/>
     </div>
   );
 };

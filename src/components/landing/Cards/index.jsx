@@ -1,41 +1,30 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Card from "./card";
 import "./style.css";
-import riveImage from "assets/other/card/rice.png";
-import vegetableImage from "assets/other/card/rau-cu.png";
-import cerealsImage from "assets/other/card/ngu-coc.png";
-import cafeImage from "assets/other/card/cafe.png";
-import fruitImage from "assets/other/card/trai-cay.png";
+import app from "firebase";
 
 const Cards = () => {
-  const [list, setList] = useState([
-    {
-      pic: riveImage,
-      type: "Gạo",
-    },
-    {
-      pic: vegetableImage,
-      type: "Rau củ",
-    },
-    {
-      pic: cerealsImage,
-      type: "Ngũ cốc",
-    },
-    {
-      pic: cafeImage,
-      type: "Cà phê",
-    },
-    {
-      pic: fruitImage,
-      type: "Trái cây",
-    },
-  ]);
+  const [list, setList] = useState([]);
 
+  useEffect(() => {
+    function fetchData() {
+      const ref = app.firestore().collection("category-product");
+      ref.onSnapshot((querySnapShot) => {
+        var items = [];
+        querySnapShot.forEach((doc) => {
+          items.push(doc.data());
+        });
+        setList(items);
+      });
+    }
+    fetchData();
+  }, []);
+  console.log(list);
   return (
     <div className="card-block">
       <div className="cards">
         {list.map((item, index) => (
-          <Card image={item.pic} name={item.type} key={index} />
+          <Card image={item.pic} name={item.name} key={index} />
         ))}
       </div>
     </div>

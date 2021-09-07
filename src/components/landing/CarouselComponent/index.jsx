@@ -1,70 +1,34 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"
-import "./Style.css"
-import { Link } from 'react-router-dom';
-import slides from './images';
+import "slick-carousel/slick/slick-theme.css";
+import "./style.css";
+import SlideItem from "./slide-item";
 
 const CarouselComponent = () => {
-    let settings = {
-        dots: false,
-        infinite: true,
-        speed: 2000,
-        fade: true,
-        autoplay: true,
-        autoplaySpeed: 2500,
-        csssEase: "linear",
-        draggable: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-    }
-    return (
-        <div className="slide-container">            
-            <Slider {...settings}>
-                <div className="slides">
-                    <div className="slide-content">
-                        <div className = "text">
-                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán
-                        </div>
-                        <button className="infor-link">                        
-                            <Link to="/#" className="link" >
-                                Thông tin chi tiết tại đây
-                            </Link>
-                        </button>
-                    </div>
-                    <img className="slide" src={slides.img1}/>
-                </div>
-                <div className="slides">
-                    <div className="slide-content">
-                        <div className = "text">
-                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán
-                        </div>
-                        <button className="infor-link">                        
-                            <Link to="/#" className="link" >
-                                Thông tin chi tiết tại đây
-                            </Link>
-                        </button>
-                    </div>
-                    <img className="slide" src={slides.img2}/>
-                </div>
-                <div className="slides">
-                    <div className="slide-content">
-                        <div className = "text">
-                            Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn lựu không hạt ngon như gái 18 muốn bán
-                        </div>
-                        <button className="infor-link">                        
-                            <Link to="/#" className="link" >
-                                Thông tin chi tiết tại đây
-                            </Link>
-                        </button>
-                    </div>
-                    <img className="slide" src={slides.img3}/>
-                </div>
-            </Slider>
-        </div>
-    )
-}
+  let settings = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4500,
+    csssEase: "linear",
+    draggable: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+  return (
+    <div className="slide-container">
+      <Slider {...settings}>
+        <SlideItem description="Nông dân Bùi Thị Minh Nguyệt đang có 1 tấn Dưa hấu không hạt ngon như gái 18 muốn bán. Sản phẩm đang ở chuẩn Flite 4" />
+        <SlideItem description="Nông dân Võ Ngọc Thành vừa đạt danh hiệu chăn rau sạch chuẩn Flite 5!" />
+        <SlideItem description="Tập đoàn đa quốc gia Nguyễn Lâm đang có nhu cầu thu mua rau sạch chuẩn Flite 5!" />
+        <SlideItem description="Thương lái TN. Qúy Ngọc đang cần 500 tấn ngũ cốc đạt chuẩn Flite 3" />
+      </Slider>
+    </div>
+  );
+};
 
-export default CarouselComponent
+export default CarouselComponent;

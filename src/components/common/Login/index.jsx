@@ -2,7 +2,7 @@ import { React } from "react";
 import { useForm } from "react-hook-form";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import "./style.css";
-import app from "firebase";
+import firebase from "firebase";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { signIn } from "actions/user";
@@ -18,7 +18,7 @@ const Login = () => {
   });
 
   const login = (data) => {
-    const auth = getAuth(app);
+    const auth = getAuth(firebase);
     signInWithEmailAndPassword(auth, data.username, data.password)
       .then((userCredential) => {
         const userResult = userCredential.user;
@@ -82,12 +82,12 @@ const Login = () => {
           Đăng nhâp
         </button>
       </div>
-        <p className="register-link">
-          Nếu chưa có tài khoản.
-          <Link className="link" to="/register">
-            Đăng ký tai đây
-          </Link>
-        </p>
+      <p className="register-link">
+        Nếu chưa có tài khoản.
+        <Link className="link" to="/register">
+          Đăng ký tai đây
+        </Link>
+      </p>
 
       <p className="watermark">Made by BestRNothing Team</p>
     </form>
