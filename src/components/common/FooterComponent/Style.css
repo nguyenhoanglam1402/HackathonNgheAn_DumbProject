@@ -22,9 +22,9 @@
 }
 .footer-logo-container{
     width: 200px;
-    background: rgba(36, 35, 35, 0.548);
 }
 .logo-footer-image{
-    height: 50px;
+    height: 250px;
+    width: 250px;
     margin-bottom: 15px;
 }

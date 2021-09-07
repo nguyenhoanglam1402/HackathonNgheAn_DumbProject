@@ -1,4 +1,4 @@
-import { CarouselComponent } from "components/landing";
+import  CarouselComponent from "components/landing/CarouselComponent";
 import Cards from "components/landing/Cards";
 import { React } from "react";
 import { NavigaionBar, FooterComponent } from "components/common";
