@@ -1,7 +1,7 @@
 const initializeState = 0;
 
 const creditReducer = (state = initializeState, action) => {
-  switch (action.tyoe) {
+  switch (action.type) {
     case "ADD_CREDIT": {
       break;
     }

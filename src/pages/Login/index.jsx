@@ -1,10 +1,11 @@
 import { React } from "react";
 import "./style.css";
 import image from "assets/images/Login.png";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { LoginComponent, RegisterComponent } from "components/common";
 
-const LoginPage = () => {
+const LoginPage = (_) => {
+  const state = useLocation();
   return (
     <div className="column-container">
       <div className="row-container">
@@ -13,14 +14,13 @@ const LoginPage = () => {
             <div className="image-block">
               <img className="image-login" src={image} alt="" />
             </div>
-            <Router>
-              <div className="content">
-                <Switch>
-                  <Route path="/login" component={ LoginComponent }/>
-                  <Route path="/register" component={RegisterComponent}/>
-                </Switch>
-              </div>
-            </Router>
+            <div className="content">
+              {state.pathname === "/login" ? (
+                <LoginComponent />
+              ) : (
+                <RegisterComponent />
+              )}
+            </div>
           </div>
         </div>
       </div>

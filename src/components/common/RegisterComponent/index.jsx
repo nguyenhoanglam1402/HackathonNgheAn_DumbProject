@@ -6,7 +6,11 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import firebase from "firebase";
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 
 //Schema
 const signUpSchema = yup.object().shape({
@@ -32,11 +36,15 @@ const RegisterComponent = () => {
   });
   const onRegister = (data) => {
     const { email, password } = data;
-    const auth = getAuth(firebase);
+    const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         console.log("Sign Up Complete");
+        updateProfile(auth.currentUser, {
+          displayName: data.fullName,
+          photoURL: "",
+        });
         // ...
       })
       .catch((error) => {
