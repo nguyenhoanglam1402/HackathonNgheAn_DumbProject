@@ -30,7 +30,7 @@ const NavigaionBar = () => {
           </ul>
         </div>
         <div className="sign-in-block">
-          <button className="sign-in btn">Đăng nhập</button>
+          <Link to="/login" className="sign-in btn">Đăng nhập</Link>
         </div>
       </div>
     </nav>

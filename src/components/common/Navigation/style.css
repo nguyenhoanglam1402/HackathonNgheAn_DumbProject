@@ -69,6 +69,7 @@ nav {
   padding: 10px 20px;
   font-family: var(--global-font);
   margin: 0;
+  text-decoration: none;
 }
 
 .sign-in-block {
