@@ -10,22 +10,45 @@ const FooterComponent = () => {
           <img className="logo-footer-image" src={logo} alt="" />
         </div>
         <div className="footer-about-container">
-          <h2>Description</h2>
-          <p>Lorem isum</p>
+          <h2>Giới thiệu</h2>
+          <p class="text-about">Flite được tạo ra với mục đích kết nối nhanh chóng giữa cung và cầu cho ngành nông nghiệp. 
+            Hân hạnh được phục vụ cho nhu cầu của bạn.</p>
         </div>
         <div className="footer-product-container">
-          <h2>Product</h2>
-          <p>Lorem isum</p>
+          <h2>Sản phẩm</h2>
+          <li class="rice-footer">
+            <a href="#">Gạo</a>
+          </li>
+          <li class="rice-footer">
+            <a href="#">Trái cây</a>
+          </li>
+          <li class="rice-footer">
+            <a href="#">Cà phê</a>
+          </li>
+          <li class="rice-footer">
+            <a href="#">Rau củ</a>
+          </li>
+          <li class="rice-footer">
+            <a href="#">Ngũ cốc</a>
+          </li>
         </div>
         <div className="footer-contact-container">
-          <h2>Contact</h2>
-          <p>Lorem isum</p>
+          <h2>Liên hệ</h2>
+          <div class="textwidget">
+            22 Cách mạng tháng 8, Đà Nẵng
+            <br/><a href="mailto:farmerlite@gmail.com">farmerlite@gmail.com</a>
+            <br/>Làm việc 24/7
+            <br/>0915012166
+          </div>
         </div>
       </div>
       <div className="footer-row-under">
         <div className="footer-contact-container">
-          <h2>Contact</h2>
-          <p>Lorem isum</p>
+          <p>&copy; Copyright 2021 
+            <span class="sitename"> FarmerLite </span>
+            | 
+            <a href="https://i.imgur.com/NTHTrYH.jpg"> BestRNothing Team</a>
+          </p>
         </div>
       </div>
     </div>
