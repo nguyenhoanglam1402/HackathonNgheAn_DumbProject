@@ -1,4 +1,4 @@
-import  {CarouselComponent, MapComponent,Cards} from "components/landing";
+import { CarouselComponent, Cards } from "components/landing";
 import { React } from "react";
 import { NavigaionBar, FooterComponent } from "components/common";
 
@@ -8,8 +8,7 @@ const HomePage = () => {
       <NavigaionBar />
       <CarouselComponent />
       <Cards />
-      <MapComponent/>
-      <FooterComponent/>
+      <FooterComponent />
     </div>
   );
 };
