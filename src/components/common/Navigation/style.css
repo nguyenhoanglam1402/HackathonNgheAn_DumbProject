@@ -8,7 +8,7 @@ nav {
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: transparent;
   position: sticky;
   height: 90px;
