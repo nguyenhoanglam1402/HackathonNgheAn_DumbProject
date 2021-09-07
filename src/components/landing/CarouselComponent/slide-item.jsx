@@ -1,5 +1,5 @@
 import { React } from "react";
-import slides from "./images";
+import image from "assets/images/slide1.jpg";
 import { Link } from "react-router-dom";
 import "./style.css";
 
@@ -16,7 +16,7 @@ const SlideItem = (props) => {
           </button>
         </div>
       </div>
-      <img className="slide" src={slides.img1} alt="" />
+      <img className="slide" src={image} alt="" />
     </div>
   );
 };
