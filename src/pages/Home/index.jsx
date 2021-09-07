@@ -1,7 +1,7 @@
 import { CarouselComponent } from "components/landing";
 import Cards from "components/landing/Cards";
 import { React } from "react";
-import { NavigaionBar } from "../../components/common";
+import { NavigaionBar, FooterComponent } from "components/common";
 
 const HomePage = () => {
   return (
@@ -9,6 +9,7 @@ const HomePage = () => {
       <NavigaionBar />
       <CarouselComponent/>
       <Cards />
+      <FooterComponent/>
     </div>
   );
 };
