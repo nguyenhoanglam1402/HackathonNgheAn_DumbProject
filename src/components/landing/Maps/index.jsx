@@ -1,28 +1,23 @@
 import React, { useState,useEffect } from 'react';
-import GoogleMapReact from 'google-map-react';
+import {GoogleMap, Marker,withGoogleMap, withScriptjs,} from 'react-google-maps';
 import Mark from './mark';
+import "./style.css";
 
 const MapComponent = () =>{
   const [center, setCenter] = useState({
-          lat: 59.95,
-          lng: 30.33
+          lat: 16.0545,
+          lng: 108.0717
         });
-  const [zoom,setZoom] = useState(11);
+  const [zoom,setZoom] = useState(6);
   return(
-    <div style={{ height: '100vh', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
+    <div className="map-container">
+        <GoogleMap
            defaultCenter={center}
            defaultZoom={zoom}
          >
-           <Mark
-             lat={59.955413}
-             lng={30.337844}
-             checkPoint="Position"
-           />
-         </GoogleMapReact>
-       </div>
+         </GoogleMap>
+    </div>
   );
 };
 
-export default MapComponent;
+export default withScriptjs(withGoogleMap(MapComponent));
