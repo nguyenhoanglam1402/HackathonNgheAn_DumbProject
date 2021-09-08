@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import firebase from "firebase";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Card = (props) => {
   const [urlImage, setURL] = useState("");
@@ -15,7 +16,12 @@ const Card = (props) => {
   return (
     <div className="card">
       <div className="card-image-block">
-        <img className="card-image" src={urlImage} alt={props.image} />
+        <LazyLoadImage
+          className="card-image"
+          effect="blur"
+          src={urlImage}
+          alt={urlImage}
+        />
       </div>
       <h2 className="card-title">{props.name}</h2>
     </div>
