@@ -4,7 +4,9 @@ const Mark = (props) =>
 {   
 
     return(
-        <div>{props.checkPoint}</div>
+        <div className="mark-point">
+            {props.checkPoint}
+        </div>
     );
 };
 

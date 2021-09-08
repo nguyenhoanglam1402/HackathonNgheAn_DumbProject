@@ -3,11 +3,11 @@ import GoogleMapReact from "google-map-react";
 import Mark from "./mark";
 
 const MapComponent = () => {
-  const [center, setCenter] = useState({
+  const [center] = useState({
     lat: 16.0545,
     lng: 108.0717,
   });
-  const [zoom, setZoom] = useState(6);
+  const [zoom] = useState(6);
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <GoogleMapReact
