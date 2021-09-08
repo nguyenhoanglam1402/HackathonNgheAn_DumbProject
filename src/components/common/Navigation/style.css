@@ -26,7 +26,7 @@ nav {
 .nav-menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   height: 100%;
   flex: 0 0 60%;
 }
@@ -40,7 +40,7 @@ nav {
 }
 
 .nav-menu-group {
-  width: fit-content;
+  flex: 0 0 60%;
 }
 
 .logo-brand-image {
@@ -84,7 +84,7 @@ nav {
 .user-avatar {
   height: 50px;
   width: 50px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   border: 2px solid var(--green-tea);
 }
@@ -93,6 +93,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 .username-block {
@@ -112,4 +113,9 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.extra-items {
+  display: flex;
+  flex-direction: row;
 }

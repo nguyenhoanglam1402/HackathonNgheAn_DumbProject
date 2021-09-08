@@ -17,7 +17,7 @@ const NavigaionBar = () => {
         <div className="nav-menu-group">
           <ul className="nav-menu">
             <li className="nav-item">
-              <Link className="nav-link" to="/home">
+              <Link className="nav-link" to="/">
                 Trang chủ
               </Link>
             </li>
@@ -26,12 +26,27 @@ const NavigaionBar = () => {
                 Sản phẩm
               </Link>
             </li>
+            {store.uid !== "" ? (
+              <div className="extra-items">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/product">
+                    Kết nối
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/product">
+                    Blog
+                  </Link>
+                </li>
+              </div>
+            ) : null}
             <li className="nav-item">
               <Link className="nav-link" to="/product">
                 Giới thiệu
               </Link>
             </li>
           </ul>
+          }
         </div>
         {store.uid !== "" ? (
           <div className="sign-in-block">
@@ -45,6 +60,7 @@ const NavigaionBar = () => {
                 <p className="username">{store.username}</p>
               </div>
             </div>
+            <div></div>
           </div>
         ) : (
           <div className="sign-in-block">

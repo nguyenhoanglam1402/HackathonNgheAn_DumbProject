@@ -39,7 +39,7 @@
   }
 
   .card {
-    flex: 0 0 calc(20% - 10px);
+    flex: 0 0 20%;
     height: 300px;
     max-width: 250px;
     transition: 0.2s;

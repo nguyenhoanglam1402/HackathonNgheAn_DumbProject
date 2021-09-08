@@ -1,0 +1,24 @@
+.post-item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(20% - 10px);
+  padding: 10px;
+  margin: 10px;
+  background-color: #f5f5f5;
+}
+
+.titlebar-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-block {
+  padding: 20px 0;
+  margin: var(--container-margin);
+}
+
+.post-item-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

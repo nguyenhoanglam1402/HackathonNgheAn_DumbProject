@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-
+import firebase from "firebase";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -26,6 +26,7 @@ const signUpSchema = yup.object().shape({
 });
 
 const RegisterComponent = () => {
+  const history = useHistory();
   const {
     register,
     handleSubmit,
@@ -44,6 +45,17 @@ const RegisterComponent = () => {
           displayName: data.fullName,
           photoURL: "",
         });
+        firebase
+          .firestore()
+          .collection("user")
+          .doc(userCredential.user.uid)
+          .set({
+            avatarUrl: "",
+            credit: 0,
+            farmer: data.role === "Farmer" ? true : false,
+            username: data.fullName,
+          });
+        history.push("/login");
         // ...
       })
       .catch((error) => {
