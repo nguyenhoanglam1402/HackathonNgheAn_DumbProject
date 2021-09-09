@@ -1,34 +1,31 @@
 import { React, useEffect, useState } from "react";
 import "./style.css";
-import firebase from "firebase";
 import PostItem from "./post-item";
+import { fetchPosts } from "api/services";
 
 const Posts = () => {
   const [newsfeed, setNewsFeed] = useState([]);
+
   useEffect(() => {
-    let lists = [];
-    const unsubcribe = firebase
-      .firestore()
-      .collection("newsfeed")
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.docs.forEach((item) => {
-          lists.push(item.data());
-        });
-        setNewsFeed(lists);
+    fetchPosts()
+      .then((data) => {
+        setNewsFeed(data);
       })
-      .catch((error) => {
-        console.log(error);
-      });
-    return unsubcribe; //Stop updating if it was unmounted
+      .catch((error) => console.error(error));
   }, []);
+
   return (
     <div className="post-block">
       <div className="post-item-block">
         {newsfeed.map((item, index) => {
-          console.log(item);
+          console.log(item.uid);
           return (
-            <PostItem name="Nguyen Lam" content={item.content} key={index} />
+            <PostItem
+              name={item.author}
+              key={index}
+              content={item.content}
+              imageURL={item.images[0]}
+            />
           );
         })}
       </div>

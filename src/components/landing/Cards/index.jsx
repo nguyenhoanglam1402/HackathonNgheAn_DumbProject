@@ -2,6 +2,8 @@ import { React, useEffect, useState } from "react";
 import Card from "./card";
 import "./style.css";
 import app from "firebase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCarrot } from "@fortawesome/free-solid-svg-icons";
 
 const Cards = () => {
   const [list, setList] = useState([]);
@@ -22,6 +24,11 @@ const Cards = () => {
   console.log(list);
   return (
     <div className="card-block">
+      <h1 className="title-block">
+        Nông sản hiện có
+        <FontAwesomeIcon className="title-icon" icon={faCarrot} />
+      </h1>
+
       <div className="cards">
         {list.map((item, index) => (
           <Card image={item.pic} name={item.name} key={index} />

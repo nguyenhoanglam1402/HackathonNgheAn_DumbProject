@@ -9,6 +9,8 @@
 
   /* Global margin form container*/
   --container-margin: 0 10%;
+  /* Global shadow */
+  --global-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   --phone-size: 600px;
   --tablet-size: 700px;
