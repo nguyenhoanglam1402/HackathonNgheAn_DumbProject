@@ -9,7 +9,7 @@ const HomePage = () => {
       <NavigaionBar />
       <CarouselComponent />
       <Cards />
-      <Posts />
+      <Posts/>
       <MapComponent />
       <FooterComponent />
     </div>
