@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import InitMap from "./initMap";
+import React from 'react';
+import InitMap from './initMap';
 import './style.css';
 
 const MapComponent = () => {
