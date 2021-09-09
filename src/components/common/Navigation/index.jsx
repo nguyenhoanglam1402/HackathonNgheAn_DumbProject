@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { useSelector } from "react-redux";
 import defaultAvatar from "assets/images/avatar.png";
+import scroller from "react-scroll";
 
 const NavigaionBar = () => {
   const store = useSelector((store) => store.user);
@@ -26,23 +27,14 @@ const NavigaionBar = () => {
                 Sản phẩm
               </Link>
             </li>
-            {store.uid !== "" ? (
-              <div className="extra-items">
-                <li className="nav-item">
-                  <Link className="nav-link" to="/product">
-                    Kết nối
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/product">
-                    Blog
-                  </Link>
-                </li>
-              </div>
-            ) : null}
             <li className="nav-item">
               <Link className="nav-link" to="/product">
-                Giới thiệu
+                Tìm kiếm
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/product">
+                Đăng bài
               </Link>
             </li>
           </ul>
