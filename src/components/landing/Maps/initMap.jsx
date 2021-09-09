@@ -26,10 +26,10 @@ const getCursor=({isHovering, isDragging})=> {
 }
 const InitMap = ()=> {
   const [viewport, setViewport] = useState({
-    height: 700,
+    height: 650,
     latitude: 16.0545,
     longitude: 108.0717,
-    zoom: 5
+    zoom: 4
   });
   const [popupInfo, setPopupInfo] = useState(null);
   return (
