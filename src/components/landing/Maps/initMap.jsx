@@ -29,7 +29,7 @@ const InitMap = ()=> {
     height: 700,
     latitude: 16.0545,
     longitude: 108.0717,
-    zoom: 11
+    zoom: 5
   });
   const [popupInfo, setPopupInfo] = useState(null);
   return (
