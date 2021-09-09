@@ -9,7 +9,6 @@ const HomePage = () => {
       <NavigaionBar />
       <CarouselComponent />
       <Cards />
-      <Posts />
       <MapComponent />
       <FooterComponent />
     </div>
