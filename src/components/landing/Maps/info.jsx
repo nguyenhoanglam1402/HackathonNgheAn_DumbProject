@@ -1,16 +1,24 @@
 import * as React from 'react';
 
+
 const Info = (props)=> {
   const {info} = props;
-  const displayName = `${info.id}, ${info.name}`;
-
+  const author = `${info.id}`;
+  const content = `${info.address}`
+  const lat = `${info.latitude}`
+  const lng = `${info.longitude}`
   return (
-    <div>
+    <>
       <div>
-        {displayName}
+        {author}
+      </div>
+      <div>
+        {content}
+        {lat}
+        {lng}
       </div>
       {/* <img width={240} src={info.image} /> */}
-    </div>
+    </>
   );
 }
 

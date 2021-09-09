@@ -38,7 +38,6 @@ const NavigaionBar = () => {
               </Link>
             </li>
           </ul>
-          }
         </div>
         {store.uid !== "" ? (
           <div className="sign-in-block">
