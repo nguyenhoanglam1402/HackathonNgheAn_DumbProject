@@ -5,3 +5,16 @@
 .map-container{
     margin: var(--container-margin);
 }
+.infor-container{
+    width: 240px;
+}
+.infor-author{
+    color: var(--green-tea);
+    font-size: 20px;
+    font-family: var(--global-font);
+    border-bottom: 1px solid var(--green-tea);
+}
+.infor-content{
+    font-family: var(--global-font);
+    font-size: 15px;
+}

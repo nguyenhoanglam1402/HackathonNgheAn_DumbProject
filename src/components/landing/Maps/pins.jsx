@@ -6,25 +6,23 @@ const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,
   C20.1,15.8,20.2,15.8,20.2,15.7z`;
 
 const Pins = (props) => {
-  const { data, onClick, sizeZoom } = props;
-  console.log("data from pins", data);
+  const { data, onClick } = props;
 
   const markers = data.map((addrr, index) => {
     return (
       <Marker
         key={`${index}`}
-        offsetTop={(sizeZoom * 5) / 2}
         longitude={addrr.longitude}
         latitude={addrr.latitude}
       >
         <svg
-          height={sizeZoom * 3}
-          width={sizeZoom * 3}
+          height={20}
           viewBox="0 0 24 24"
           style={{
             cursor: "pointer",
             fill: "#d00",
             stroke: "none",
+            transform: `translate(${-20 / 2}px,${-20}px)`,
           }}
           onClick={() => onClick(addrr)}
         >
@@ -34,7 +32,6 @@ const Pins = (props) => {
     );
   });
 
-  console.log("markers", markers);
   return markers;
 };
 export default Pins;

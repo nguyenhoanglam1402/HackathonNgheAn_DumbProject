@@ -1,10 +1,9 @@
 .cards {
   display: flex;
-  position: relative;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
   background-color: transparent;
+  margin: var(--container-margin);
 }
 
 .card {
@@ -42,37 +41,21 @@
   color: var(--green-tea);
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (max-width: 1980px) {
   .card-block {
     display: block;
     margin: auto;
   }
 
   .card {
-    flex: 0 0 20%;
+    flex: 0 0 calc(20% - 20px);
     height: 300px;
-    max-width: 250px;
     transition: 0.2s;
   }
 
   .card:hover {
     width: 260px;
     height: 310px;
-    transition: 0.2s;
-  }
-}
-
-@media screen and (min-width: 900) {
-  .card-block {
-    display: block;
-    margin: auto;
-    width: 100%;
-  }
-
-  .card {
-    display: flex;
-    flex: 0 0 calc(33.33% - 10px);
-    height: 300px;
     transition: 0.2s;
   }
 }

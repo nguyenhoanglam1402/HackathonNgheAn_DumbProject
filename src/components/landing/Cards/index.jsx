@@ -1,27 +1,24 @@
 import { React, useEffect, useState } from "react";
 import Card from "./card";
 import "./style.css";
-import app from "firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCarrot } from "@fortawesome/free-solid-svg-icons";
+import { fetchCategory } from "api/services";
+import { useDispatch } from "react-redux";
+import { setCategory } from "actions/category";
 
 const Cards = () => {
   const [list, setList] = useState([]);
-
+  const categoryDispath = useDispatch();
   useEffect(() => {
-    function fetchData() {
-      const ref = app.firestore().collection("category-product");
-      ref.onSnapshot((querySnapShot) => {
-        var items = [];
-        querySnapShot.forEach((doc) => {
-          items.push(doc.data());
-        });
-        setList(items);
-      });
-    }
-    fetchData();
+    fetchCategory()
+      .then((data) => {
+        setList(data);
+      })
+      .catch((error) => console.log(error));
   }, []);
-  console.log(list);
+  const action = setCategory(list);
+  categoryDispath(action);
   return (
     <div className="card-block">
       <h1 className="title-block">
