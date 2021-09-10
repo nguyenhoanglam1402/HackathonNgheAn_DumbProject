@@ -33,8 +33,8 @@ const Pins = (props) => {
       </Marker>
     );
   });
-  
-  console.log('markers', markers);
+
+  console.log("markers", markers);
   return markers;
 };
 export default Pins;

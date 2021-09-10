@@ -1,7 +1,6 @@
 import firebase from "firebase";
 
 export const fetchPosts = async () => {
-
   const posts = await firebase
     .firestore()
     .collection("newsfeed")
@@ -19,3 +18,4 @@ export const fetchPosts = async () => {
 
   return posts;
 }
+

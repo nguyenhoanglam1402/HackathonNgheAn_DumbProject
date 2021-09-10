@@ -3,7 +3,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import imageAvatar from "assets/images/avatar.png";
 import postDefaltImage from "assets/icons/logo.png";
 import firebase from "firebase";
-import { date } from "yup/lib/locale";
 
 const PostItem = (props) => {
   const [image, setImage] = useState();
