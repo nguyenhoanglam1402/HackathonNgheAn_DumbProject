@@ -22,7 +22,7 @@ const InitMap = () => {
   const [popupInfo, setPopupInfo] = useState(null);
   const [addressMarker, setAddressMarker] = useState([]);
 
-//fetchLocation
+  //fetchLocation
   const fetchLocation = async (addr) => {
     const promises = addr.map(async (data) => {
       try {
@@ -44,14 +44,14 @@ const InitMap = () => {
     });
   };
 
-//render Marker
+  //render Marker
   const renderMarkerAddr = (addreses) => {
     return (
       <Pins data={addreses} onClick={setPopupInfo} sizeZoom={viewport.zoom} />
     );
   };
 
-//fetchdata
+  //fetchdata
   useEffect(() => {
     if (addressMarker.length === 0) {
       fetchPosts().then(async (data) => {

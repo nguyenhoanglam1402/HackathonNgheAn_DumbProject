@@ -19,10 +19,10 @@ const Pins = (props) => {
           height={20}
           viewBox="0 0 24 24"
           style={{
-            cursor: 'pointer',
-          fill: '#d00',
-          stroke: 'none',
-          transform: `translate(${-(20) / 2}px,${-(20)}px)`
+            cursor: "pointer",
+            fill: "#d00",
+            stroke: "none",
+            transform: `translate(${-20 / 2}px,${-20}px)`,
           }}
           onClick={() => onClick(addrr)}
         >

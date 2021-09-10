@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { useSelector } from "react-redux";
 import defaultAvatar from "assets/images/avatar.png";
-import scroller from "react-scroll";
 
 const NavigaionBar = () => {
   const store = useSelector((store) => store.user);
