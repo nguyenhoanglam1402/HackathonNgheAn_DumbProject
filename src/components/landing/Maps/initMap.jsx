@@ -87,8 +87,9 @@ const InitMap = () => {
           tipSize={5}
           longitude={popupInfo.longitude}
           latitude={popupInfo.latitude}
-          closeOnClick={false}
+          closeOnClick={true}
           onClose={setPopupInfo}
+          closeButton={false}
         >
           <Info info={popupInfo} />
         </Popup>
