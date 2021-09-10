@@ -1,25 +1,20 @@
-import * as React from 'react';
-
-
-const Info = (props)=> {
-  const {info} = props;
-  const author = `${info.id}`;
-  const content = `${info.address}`
-  const lat = `${info.latitude}`
-  const lng = `${info.longitude}`
+import * as React from "react";
+import "./style.css";
+const Info = (props) => {
+  const { info } = props;
+  const author = `${info.author}`;
+  const content = `${info.content}`;
   return (
-    <>
-      <div>
-        {author}
+    <div className="infor-container">
+      <div className="infor-author">{author}</div>
+      <div className="content-container">
+        <p className="infor-content">{content}</p>
+        <div>
+          <img width={240} src={info.pic} alt="" />
+        </div>
       </div>
-      <div>
-        {content}
-        {lat}
-        {lng}
-      </div>
-      {/* <img width={240} src={info.image} /> */}
-    </>
+    </div>
   );
-}
+};
 
-export default React.memo(Info);
+export default Info;
