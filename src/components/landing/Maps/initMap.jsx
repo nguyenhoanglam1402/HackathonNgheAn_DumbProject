@@ -31,7 +31,6 @@ const InitMap = (props) => {
 
   const [popupInfo, setPopupInfo] = useState(null);
   const [addressMarker, setAddressMarker] = useState([]);
-  const [searchData, setSearchData] = useState([]);
   //fetchLocation
   const fetchLocation = async (addr) => {
     const promises = addr.map(async (data) => {
@@ -64,17 +63,15 @@ const InitMap = (props) => {
   //fetchdata
   useEffect(() => {
     if (search.length === 0) {
-      // if (addressMarker.length === 0) 
-        fetchPosts().then((data) => {
-          fetchLocation(data);
-        });
+      // if (addressMarker.length === 0)
+      fetchPosts().then((data) => {
+        fetchLocation(data);
+      });
     } else {
       setAddressMarker([]);
-      setSearchData(search)
-      console.log("Search data: ",searchData);
       fetchLocation(search);
     }
-  }, [search.length]);
+  }, [search]);
   //render
   return (
     <ReactMapGL
