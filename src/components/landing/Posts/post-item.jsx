@@ -1,23 +1,16 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import imageAvatar from "assets/images/avatar.png";
 import postDefaltImage from "assets/icons/logo.png";
-import firebase from "firebase";
 
 const PostItem = (props) => {
-  const [image, setImage] = useState();
-  const imageRef = firebase.storage().ref(props.imageURL);
-  imageRef
-    .getDownloadURL()
-    .then((data) => setImage(data))
-    .catch((error) => console.error(error));
   return (
     <div className="post-item">
       <div className="titlebar-item">
         <LazyLoadImage
-          className="user-avatar"
+          className="post-avatar"
           src={imageAvatar || props.avatar}
-          alt={image}
+          alt={imageAvatar}
         />
         <div className="username-block">
           <p className="username">{props.name}</p>
@@ -26,7 +19,7 @@ const PostItem = (props) => {
       <div className="post-content">
         <LazyLoadImage
           className="post-image"
-          src={image ? image : postDefaltImage}
+          src={props.imageURL || postDefaltImage}
         />
         <p className="content-detail">{props.content}</p>
       </div>

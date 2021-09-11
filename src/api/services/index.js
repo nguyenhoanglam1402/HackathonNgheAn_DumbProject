@@ -32,3 +32,17 @@ export const fetchCategory = async () => {
   return categories;
 }
 
+export const uploadPost = async (data) => {
+  const storageRef = firebase.storage().ref(`product-detail/${data.uid}`);
+  const images = data.images.map((item) => {
+    const subRef = storageRef.child(item.name);
+    subRef.put(item);
+    return subRef.getDownloadURL();
+  });
+  const result = await Promise.all(images);
+  firebase.firestore().collection("newsfeed").add({
+    ...data,
+    images: result
+  })
+}
+

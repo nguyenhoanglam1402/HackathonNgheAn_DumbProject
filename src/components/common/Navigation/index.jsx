@@ -32,7 +32,7 @@ const NavigaionBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/product">
+              <Link className="nav-link" to="/product-creator">
                 Đăng bài
               </Link>
             </li>

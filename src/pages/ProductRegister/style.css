@@ -1,0 +1,10 @@
+.product-register-page {
+  display: flex;
+  padding-top: 90px;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+  justify-content: center;
+  background-image: url("../../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
