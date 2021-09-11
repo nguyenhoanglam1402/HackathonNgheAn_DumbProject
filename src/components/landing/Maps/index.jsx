@@ -2,10 +2,10 @@ import React from 'react';
 import InitMap from './initMap';
 import './style.css';
 
-const MapComponent = () => {
+const MapComponent = (props) => {
   return (
     <div className="map-container">
-      <InitMap/>
+      <InitMap location = {props.location}/>
     </div>
   );
 };
