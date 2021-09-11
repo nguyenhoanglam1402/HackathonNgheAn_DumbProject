@@ -15,13 +15,13 @@ const getCursor = ({ isHovering, isDragging }) => {
 
 const InitMap = (props) => {
   InitMap.propTypes = {
-    location: PropTypes.string,
+    search: PropTypes.array,
   };
   InitMap.defaultProps = {
-    location: null,
+    search: [],
   };
-  const { location } = props;
-  console.log(">>Map:",location);
+  const { search } = props;
+  console.log(">>Map:", search);
   const [viewport, setViewport] = useState({
     height: 650,
     latitude: 16.0545,
@@ -31,7 +31,7 @@ const InitMap = (props) => {
 
   const [popupInfo, setPopupInfo] = useState(null);
   const [addressMarker, setAddressMarker] = useState([]);
-
+  const [searchData, setSearchData] = useState([]);
   //fetchLocation
   const fetchLocation = async (addr) => {
     const promises = addr.map(async (data) => {
@@ -63,25 +63,18 @@ const InitMap = (props) => {
 
   //fetchdata
   useEffect(() => {
-    if (addressMarker.length === 0) {
-      fetchPosts().then((data) => {
-        fetchLocation(data);
-      });
-    // } else {
-    //   const fetchDataSearch = async () => {
-    //     try {
-    //       const response = await fetchPosts();
-    //       const resultFilter = response.filter((item) =>
-    //         item.location.includes(location)
-    //       );
-    //       fetchLocation([resultFilter])
-    //     } catch (error) {
-    //       console.log("Failed to fetch data: ", error);
-    //     }
-    //   };
-    //   fetchDataSearch();
+    if (search.length === 0) {
+      // if (addressMarker.length === 0) 
+        fetchPosts().then((data) => {
+          fetchLocation(data);
+        });
+    } else {
+      setAddressMarker([]);
+      setSearchData(search)
+      console.log("Search data: ",searchData);
+      fetchLocation(search);
     }
-  }, [addressMarker.length]);
+  }, [search.length]);
   //render
   return (
     <ReactMapGL
