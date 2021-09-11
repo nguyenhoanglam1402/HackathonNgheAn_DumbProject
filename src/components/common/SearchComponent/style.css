@@ -1,0 +1,22 @@
+.search-box input {
+   padding: 10px 45px;
+   outline: none;
+   border: 1px solid gray;
+   border-radius: 5px;
+   width: calc(100% - 92px);
+   background-image: url('/src/assets/icons/search-icon.png');
+   background-position: 10px;
+   background-size: 28px 28px;
+   background-repeat: no-repeat;
+}
+
+.search-box input:focus {
+   border: 2px solid var(--green-tea);
+   color: var(--green-tea);
+}
+
+.search-box {
+   text-align: center;
+   padding-bottom: 2px;
+   margin: var(--container-margin);
+}

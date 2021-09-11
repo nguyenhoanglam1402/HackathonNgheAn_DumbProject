@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
-
+import "./style.css"
 const SearchBox = (props) => {
   SearchBox.propTypes = {
     onSubmit: PropTypes.func,
@@ -30,10 +30,10 @@ const SearchBox = (props) => {
   };
 
   return (
-    <form>
+    <form className="search-box">
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Tìm kiếm"
         value={searchItem}
         onChange={handleSearch}
       />
