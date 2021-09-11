@@ -6,19 +6,29 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import MapStyle from "StyleMap/map-style.json";
 import { fetchPosts } from "api/services";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 //custom cursor
 const getCursor = ({ isHovering, isDragging }) => {
   return isDragging ? "grabbing" : isHovering ? "pointer" : "default";
 };
 
-const InitMap = () => {
+const InitMap = (props) => {
+  InitMap.propTypes = {
+    location: PropTypes.string,
+  };
+  InitMap.defaultProps = {
+    location: null,
+  };
+  const { location } = props;
+  console.log(">>Map:",location);
   const [viewport, setViewport] = useState({
     height: 650,
     latitude: 16.0545,
     longitude: 108.0717,
     zoom: 8,
   });
+
   const [popupInfo, setPopupInfo] = useState(null);
   const [addressMarker, setAddressMarker] = useState([]);
 
@@ -54,12 +64,24 @@ const InitMap = () => {
   //fetchdata
   useEffect(() => {
     if (addressMarker.length === 0) {
-      fetchPosts().then(async (data) => {
+      fetchPosts().then((data) => {
         fetchLocation(data);
       });
+    // } else {
+    //   const fetchDataSearch = async () => {
+    //     try {
+    //       const response = await fetchPosts();
+    //       const resultFilter = response.filter((item) =>
+    //         item.location.includes(location)
+    //       );
+    //       fetchLocation([resultFilter])
+    //     } catch (error) {
+    //       console.log("Failed to fetch data: ", error);
+    //     }
+    //   };
+    //   fetchDataSearch();
     }
   }, [addressMarker.length]);
-
   //render
   return (
     <ReactMapGL
@@ -79,7 +101,7 @@ const InitMap = () => {
           enableHighAccuracy: true,
         }}
         trackUserLocation={false}
-        auto={true}
+        auto={false}
       />
       {addressMarker && renderMarkerAddr(addressMarker)}
       {popupInfo && (
