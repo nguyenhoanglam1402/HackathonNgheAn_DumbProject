@@ -1,4 +1,4 @@
-form input {
+.search-box input {
    padding: 10px 45px;
    outline: none;
    border: 1px solid gray;
@@ -10,12 +10,12 @@ form input {
    background-repeat: no-repeat;
 }
 
-form input:focus {
+.search-box input:focus {
    border: 2px solid var(--green-tea);
    color: var(--green-tea);
 }
 
-form {
+.search-box {
    text-align: center;
    padding-bottom: 2px;
    margin: var(--container-margin);

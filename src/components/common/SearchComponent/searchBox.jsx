@@ -30,7 +30,7 @@ const SearchBox = (props) => {
   };
 
   return (
-    <form>
+    <form className="search-box">
       <input
         type="text"
         placeholder="Tìm kiếm"
