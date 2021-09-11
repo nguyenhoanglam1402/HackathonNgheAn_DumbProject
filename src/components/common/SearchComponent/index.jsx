@@ -4,8 +4,8 @@ import { fetchPosts } from "api/services";
 import PropTypes from "prop-types";
 
 const Search = (props) => {
-  Search.propTypes={
-      onSubmit: PropTypes.func,
+  Search.propTypes = {
+    onSubmit: PropTypes.func,
   };
   Search.defaultProps = {
     onSubmit: null,
@@ -25,20 +25,21 @@ const Search = (props) => {
       }
     };
     fetchDataSearch();
-    console.log(">>PRODUCT LIST: ", product);
   }, [product]);
 
   //handlechanging
   const handleChanging = (newFilters) => {
     console.log("Item: ", newFilters.searchItem);
     const results = product.filter((item) =>
-      item.productName.toLowerCase().includes(newFilters.searchItem.toLowerCase())
+      item.productName
+        .toLowerCase()
+        .includes(newFilters.searchItem.toLowerCase())
     );
-    setProduct(results);
-    console.log("RESULT: ", results);
-    results.map((data)=>(
-        onSubmit(data.location)
-    ))
+    if (newFilters.searchItem.length === 0) {
+      onSubmit([]);
+    } else {
+      onSubmit(results);
+    }
   };
   return (
     <div>

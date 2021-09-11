@@ -9,7 +9,7 @@ const SearchBox = (props) => {
     onSubmit: null,
   };
   const { onSubmit } = props;
-  const [searchItem, setSearchItem] = useState([]);
+  const [searchItem, setSearchItem] = useState("");
   const collecting = useRef(null);
 
   const handleSearch = (e) => {

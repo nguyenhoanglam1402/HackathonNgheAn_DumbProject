@@ -9,9 +9,6 @@ const Info = (props) => {
       <div className="infor-author">{author}</div>
       <div className="content-container">
         <p className="infor-content">{content}</p>
-        <div>
-          <img width={240} src={info.pic} alt="" />
-        </div>
       </div>
     </div>
   );
