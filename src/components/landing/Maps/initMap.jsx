@@ -6,22 +6,32 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import MapStyle from "StyleMap/map-style.json";
 import { fetchPosts } from "api/services";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 //custom cursor
 const getCursor = ({ isHovering, isDragging }) => {
   return isDragging ? "grabbing" : isHovering ? "pointer" : "default";
 };
 
-const InitMap = () => {
+const InitMap = (props) => {
+  InitMap.propTypes = {
+    search: PropTypes.array,
+  };
+  InitMap.defaultProps = {
+    search: [],
+  };
+  const { search } = props;
+  console.log(">>Map:", search);
   const [viewport, setViewport] = useState({
     height: 650,
     latitude: 16.0545,
     longitude: 108.0717,
     zoom: 8,
   });
+
   const [popupInfo, setPopupInfo] = useState(null);
   const [addressMarker, setAddressMarker] = useState([]);
-
+  const [searchData, setSearchData] = useState([]);
   //fetchLocation
   const fetchLocation = async (addr) => {
     const promises = addr.map(async (data) => {
@@ -53,13 +63,18 @@ const InitMap = () => {
 
   //fetchdata
   useEffect(() => {
-    if (addressMarker.length === 0) {
-      fetchPosts().then(async (data) => {
-        fetchLocation(data);
-      });
+    if (search.length === 0) {
+      // if (addressMarker.length === 0) 
+        fetchPosts().then((data) => {
+          fetchLocation(data);
+        });
+    } else {
+      setAddressMarker([]);
+      setSearchData(search)
+      console.log("Search data: ",searchData);
+      fetchLocation(search);
     }
-  }, [addressMarker.length]);
-
+  }, [search.length]);
   //render
   return (
     <ReactMapGL
@@ -79,7 +94,7 @@ const InitMap = () => {
           enableHighAccuracy: true,
         }}
         trackUserLocation={false}
-        auto={true}
+        auto={false}
       />
       {addressMarker && renderMarkerAddr(addressMarker)}
       {popupInfo && (
@@ -87,8 +102,9 @@ const InitMap = () => {
           tipSize={5}
           longitude={popupInfo.longitude}
           latitude={popupInfo.latitude}
-          closeOnClick={false}
+          closeOnClick={true}
           onClose={setPopupInfo}
+          closeButton={false}
         >
           <Info info={popupInfo} />
         </Popup>
