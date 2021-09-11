@@ -1,0 +1,27 @@
+.product-register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80vh;
+  width: 30%;
+  padding: 20px;
+  box-shadow: var(--global-shadow);
+  background-color: white;
+}
+
+.product-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: var(--container-margin);
+}
+
+.checkbox-label {
+  display: inline;
+  margin-left: 10px;
+}
+
+.btn-submit {
+  background-color: var(--green-tea);
+  color: white;
+}

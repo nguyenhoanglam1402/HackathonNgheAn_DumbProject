@@ -8,6 +8,13 @@
   box-shadow: var(--global-shadow);
 }
 
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--green-tea);
+  border-radius: 50%;
+}
+
 .post-image {
   width: 100%;
   height: auto;
@@ -29,4 +36,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.content-detail {
+  text-align: justify;
 }

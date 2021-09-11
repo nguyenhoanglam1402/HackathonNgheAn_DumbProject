@@ -36,3 +36,30 @@ html {
   color: black;
   margin-top: 15px;
 }
+
+.input-field-style {
+  display: block;
+  font-size: 17px;
+  padding: 15px 10px;
+  outline: nonr;
+  border: none;
+  font-weight: bold;
+  border-bottom: 2px solid #b7b7b7;
+  font-family: var(--global-font);
+  letter-spacing: 1.3px;
+}
+
+.input-field-style:focus {
+  border: none;
+  border-bottom: 2px solid var(--green-tea);
+  color: var(--green-tea);
+  outline: none;
+}
+
+.form-title {
+  font-size: 30px;
+}
+
+.green-tea {
+  color: var(--green-tea);
+}
