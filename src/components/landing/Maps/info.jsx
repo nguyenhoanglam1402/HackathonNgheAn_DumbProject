@@ -5,7 +5,7 @@ const Info = (props) => {
   const author = `${info.author}`;
   const content = `${info.content}`;
   const product = `${info.productName}`;
-  const price = `${info.prize}`;
+  const price = `${info.price}`;
   return (
     <div className="infor-container">
       <div className="infor-author">{author}</div>
