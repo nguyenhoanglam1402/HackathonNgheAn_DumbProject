@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   flex: 0 0 calc(25% - 40px);
+  justify-content: space-between;
   padding: 10px;
   margin: 10px;
   background-color: #f5f5f5;
@@ -40,4 +41,42 @@
 
 .content-detail {
   text-align: justify;
+}
+
+.connect-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.prize-connect-icon {
+  height: 100%;
+  font-size: 20px;
+  color: rgb(218, 178, 0);
+}
+
+.btn-connect {
+  font-size: 15px;
+  padding: 5px 10px;
+  color: white;
+  background-color: var(--green-tea);
+  margin: 0;
+}
+
+.prize-block div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price-tag {
+  display: inline;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.prize-block {
+  display: flex;
+  flex-direction: row;
 }

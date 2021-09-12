@@ -1,14 +1,16 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, BrowserRouter as Router, useHistory } from "react-router-dom";
 import "./style.css";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { signIn } from "actions/user";
+import { PopUp } from "components/common";
 
 const Login = () => {
   const userDispatch = useDispatch();
   const history = useHistory();
+  const [isPopUp, setPopUp] = useState(false);
 
   const { register, handleSubmit } = useForm({
     defaultValues: {
@@ -38,6 +40,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
+        setPopUp(true);
       });
   };
 
@@ -95,6 +98,13 @@ const Login = () => {
       </p>
 
       <p className="watermark">Made by BestRNothing Team</p>
+      <PopUp
+        title="Đăng nhập thất bại"
+        trigger={isPopUp}
+        setTrigger={setPopUp}
+        content="Đăng nhập thất bại. Vui lòng kiểm tra lại!"
+        completed={false}
+      />
     </form>
   );
 };
