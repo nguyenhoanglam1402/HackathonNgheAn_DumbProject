@@ -35,6 +35,12 @@ html {
   font-weight: 600;
   color: black;
   margin-top: 15px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  box-shadow: var(--global-shadow);
+  transition: 0.2s;
 }
 
 .input-field-style {

@@ -19,6 +19,7 @@
     "react-hook-form": "^7.14.2",
     "react-lazy-load-image-component": "^1.5.1",
     "react-map-gl": "^6.1.17",
+    "react-number-format": "^4.7.3",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
