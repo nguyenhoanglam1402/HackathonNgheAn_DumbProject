@@ -4,9 +4,18 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { useSelector } from "react-redux";
 import defaultAvatar from "assets/images/avatar.png";
+import { scroller } from "react-scroll";
 
 const NavigaionBar = () => {
   const store = useSelector((store) => store.user);
+
+  const scrollHandle = (session) => {
+    scroller.scrollTo(`${session}`, {
+      smooth: true,
+      duration: 800,
+      offset: -90,
+    });
+  };
 
   return (
     <nav>
@@ -22,17 +31,28 @@ const NavigaionBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/product">
-                Sản phẩm
-              </Link>
+              <p
+                className="nav-link"
+                onClick={() => scrollHandle("card-block")}
+              >
+                Sản phẩm
+              </p>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/product">
+              <p
+                className="nav-link"
+                onClick={() => {
+                  scrollHandle("search-box");
+                }}
+              >
                 Tìm kiếm
-              </Link>
+              </p>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/product-creator">
+              <Link
+                className="nav-link"
+                to={store.uid !== "" ? `product-creator` : `login`}
+              >
                 Đăng bài
               </Link>
             </li>

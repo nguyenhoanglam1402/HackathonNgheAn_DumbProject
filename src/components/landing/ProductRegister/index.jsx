@@ -2,10 +2,13 @@ import { uploadPost } from "api/services";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
+import {} from "components/common";
 import "./style.css";
+import { PopUp } from "components/common";
 
 const ProductRegister = () => {
   const store = useSelector((store) => store.user);
+  const [isPopUp, setPopUp] = useState(false);
   const [images, setImages] = useState([]);
   const { register, handleSubmit } = useForm({
     defaultValues: {
@@ -29,6 +32,7 @@ const ProductRegister = () => {
     uploadPost(fullData)
       .then((data) => {
         console.log("Successfully!");
+        setPopUp(true);
       })
       .catch((error) => console.error(error));
   };
@@ -103,6 +107,13 @@ const ProductRegister = () => {
 
         <input type="submit" className={`btn btn-submit`} />
       </form>
+      <PopUp
+        trigger={isPopUp}
+        setTrigger={setPopUp}
+        compeleted={true}
+        title="Đăng bài thành công!"
+        content="Bài đăng của bạn đã được đưa lên hệ thống Flite Newsfeed! Đừng bỏ qua cơ hội khi nhận được kết nối mới từ đối tác nhé!"
+      />
     </div>
   );
 };

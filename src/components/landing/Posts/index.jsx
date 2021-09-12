@@ -30,6 +30,7 @@ const Posts = () => {
               name={item.author}
               key={index}
               content={item.content}
+              price={item.price}
               imageURL={item.images[0]}
             />
           );
