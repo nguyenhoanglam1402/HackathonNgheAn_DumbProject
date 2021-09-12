@@ -19,7 +19,7 @@ const Posts = () => {
   return (
     <div className="post-block">
       <h1 className="title-block">
-        Bài đăng nổi bật
+        Bài đăng nổi bật
         <FontAwesomeIcon className="title-icon" icon={faBullhorn} />
       </h1>
       <div className="post-item-block">

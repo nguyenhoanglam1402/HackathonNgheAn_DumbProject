@@ -1,9 +1,15 @@
-.search-box input {
+.title-search {
+   margin: auto;
+   width: fit-content;
+   padding-bottom: 5px;
+   color: var(--green-tea);
+ }
+ .search-box input {
    padding: 10px 45px;
    outline: none;
    border: 1px solid gray;
    border-radius: 5px;
-   width: 30%;
+   width: 20%;
    background-image: url('/src/assets/icons/search-icon.png');
    background-position: 10px;
    background-size: 28px 28px;

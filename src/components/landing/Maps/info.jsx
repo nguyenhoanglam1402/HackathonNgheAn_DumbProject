@@ -4,11 +4,18 @@ const Info = (props) => {
   const { info } = props;
   const author = `${info.author}`;
   const content = `${info.content}`;
+  const product = `${info.productName}`;
+  const price = `${info.prize}`;
   return (
     <div className="infor-container">
       <div className="infor-author">{author}</div>
       <div className="content-container">
-        <p className="infor-content">{content}</p>
+        <div className="infor-product">Sản phẩm: {product}</div>
+        <div className="infor-content">Mô tả: {content}</div>
+      </div>
+      <div className="infor-price">
+        Giá ước lượng: {price} vnd
+        <br /> <span>*Có thể thương lượng*</span>
       </div>
     </div>
   );
