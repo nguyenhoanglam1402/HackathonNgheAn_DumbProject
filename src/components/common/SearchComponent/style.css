@@ -3,7 +3,7 @@
    outline: none;
    border: 1px solid gray;
    border-radius: 5px;
-   width: calc(100% - 92px);
+   width: 30%;
    background-image: url('/src/assets/icons/search-icon.png');
    background-position: 10px;
    background-size: 28px 28px;
@@ -16,7 +16,6 @@
 }
 
 .search-box {
-   text-align: center;
+   text-align: right;
    padding-bottom: 2px;
-   margin: var(--container-margin);
 }
