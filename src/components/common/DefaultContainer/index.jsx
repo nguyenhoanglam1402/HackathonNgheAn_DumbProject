@@ -7,6 +7,7 @@ const HomePage = React.lazy(() => import("pages/Home/index"));
 const ProductRegisterPage = React.lazy(() =>
   import("pages/ProductRegister/index")
 );
+const ProductPage = React.lazy(()=>import("pages/Product/index"));
 
 const DefaultContainer = () => {
   return (
@@ -14,6 +15,7 @@ const DefaultContainer = () => {
       <NavigaionBar />
       <Route exact path="/" component={HomePage} />
       <Route path="/map" component={MapComponent} />
+      <Route path="/product" component={ProductPage} />
       <Route path="/product-creator" component={ProductRegisterPage} />
     </div>
   );

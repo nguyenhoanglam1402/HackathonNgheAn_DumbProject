@@ -1,17 +1,18 @@
 import React from "react";
-import { CarouselComponent } from "components/landing";
+import { CarouselComponent,Cards } from "components/landing";
 import { FooterComponent } from "components/common";
-import { Cards } from "components/landing";
 import Card from "components/landing/Cards/card";
 import "./style.css";
+import cachua from 'assets/imageFruit/ca-chua.png';
+import cam from 'assets/imageFruit/cam.png'
 const fruit = [
   {
     name: "Cà chua",
-    image: "",
+    image: cachua,
   },
   {
     name: "Cam sành",
-    image: "",
+    image: cam,
   },
   {
     name: "Dưa hấu",
