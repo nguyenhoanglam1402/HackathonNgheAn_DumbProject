@@ -26,15 +26,14 @@ const Search = (props) => {
     };
     fetchDataSearch();
   }, [product]);
-
+  console.log("PRODUCT", product);
   //handlechanging
-  const handleChanging = (newFilters) => {
+  const handleChanging = (newFilters,e) => {
     console.log("Item: ", newFilters.searchItem);
-    const results = product.filter((item) =>
-      item.productName
-        .toLowerCase()
-        .includes(newFilters.searchItem.toLowerCase())
-    );
+    const results = product.filter((item) =>(
+        item.productName.toLowerCase().includes(newFilters.searchItem.toLowerCase())
+      ));
+    console.log("Result filter: ",results);
     if (newFilters.searchItem.length === 0) {
       onSubmit([]);
     } else {

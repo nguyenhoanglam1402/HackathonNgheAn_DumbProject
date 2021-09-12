@@ -1,6 +1,6 @@
 import { React } from "react";
 import "./style.css";
-import image from "assets/images/Login.png";
+import image from "assets/images/bgr_login.jpg";
 import { useLocation } from "react-router-dom";
 import { LoginComponent, RegisterComponent } from "components/common";
 
