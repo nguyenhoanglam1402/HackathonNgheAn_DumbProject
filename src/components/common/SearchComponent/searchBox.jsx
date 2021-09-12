@@ -31,9 +31,11 @@ const SearchBox = (props) => {
       onSubmit(formValue)
     }, 350);
   };
-
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+  }
   return (
-    <form className="search-box">
+    <form onSubmit={handleSubmit} className="search-box">
       <h1 className="title-search green-tea">
         Tìm kiếm sản phẩm trên bản đồ
         <FontAwesomeIcon className="title-icon" icon={faSearchLocation} />
