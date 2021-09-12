@@ -23,7 +23,7 @@ const NavigaionBar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/product">
-                Sản phẩm
+                Sản phẩm
               </Link>
             </li>
             <li className="nav-item">
@@ -56,7 +56,7 @@ const NavigaionBar = () => {
           <div className="sign-in-block">
             <div className="login-button-block">
               <Link to="login" className="sign-in btn">
-                Đăng nhập
+                Đăng nhập
               </Link>
             </div>
           </div>

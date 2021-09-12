@@ -44,13 +44,13 @@ const Login = () => {
   return (
     <form onSubmit={handleSubmit(login)}>
       <div className="login-container">
-        <h1>Đăng nhâp</h1>
+        <h1>Đăng nhập</h1>
         <div className="form-login-component">
           <input
             type="email"
             name="username"
             id="username"
-            placeholder="Tên đăng nhâp"
+            placeholder="Tên đăng nhập"
             {...register("username", {
               required: true,
             })}
@@ -58,7 +58,7 @@ const Login = () => {
           <input
             type="password"
             id="password"
-            placeholder="Mât khâu"
+            placeholder="Mật khâu"
             {...register("password", {
               minLength: 8,
               required: true,
@@ -78,13 +78,13 @@ const Login = () => {
             </div>
             <Router>
               <Link className="forget-link" to="#">
-                Quên mât khẩu?
+                Quên mật khẩu?
               </Link>
             </Router>
           </div>
         </div>
         <button type="submit" className="btn btn-login">
-          Đăng nhâp
+          Đăng nhập
         </button>
       </div>
       <p className="register-link">
