@@ -7,8 +7,8 @@ const HomePage = () => {
   return (
     <div className="home-container">
       <CarouselComponent />
-      <Cards />
-      <Posts />
+      <Cards title="Nông sản hiện có"/>
+      <Posts title="Bài đăng nổi bật"/>
       <MapComponent />
       <FooterComponent />
     </div>

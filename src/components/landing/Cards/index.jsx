@@ -7,7 +7,7 @@ import { fetchCategory } from "api/services";
 import { useDispatch } from "react-redux";
 import { setCategory } from "actions/category";
 
-const Cards = () => {
+const Cards = (props) => {
   const [list, setList] = useState([]);
   const categoryDispath = useDispatch();
   useEffect(() => {
@@ -22,7 +22,7 @@ const Cards = () => {
   return (
     <div className="card-block">
       <h1 className="title-block">
-        Nông sản hiện có
+        {props.title}
         <FontAwesomeIcon className="title-icon" icon={faCarrot} />
       </h1>
 

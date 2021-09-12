@@ -5,7 +5,7 @@ import { fetchPosts } from "api/services";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
 
-const Posts = () => {
+const Posts = (props) => {
   const [newsfeed, setNewsFeed] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Posts = () => {
   return (
     <div className="post-block">
       <h1 className="title-block">
-        Bài đăng nổi bật
+        {props.title}
         <FontAwesomeIcon className="title-icon" icon={faBullhorn} />
       </h1>
       <div className="post-item-block">

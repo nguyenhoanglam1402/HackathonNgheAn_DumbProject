@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchBox from "./searchBox";
 import { fetchPosts } from "api/services";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Search = (props) => {
   Search.propTypes = {
@@ -42,6 +43,10 @@ const Search = (props) => {
   };
   return (
     <div>
+      <h1 className="title-search green-tea">
+        {props.title}
+        <FontAwesomeIcon className="title-icon" icon={props.fa} />
+      </h1>
       <SearchBox onSubmit={handleChanging} />
     </div>
   );

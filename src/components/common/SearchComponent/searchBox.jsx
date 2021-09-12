@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import "./style.css";                    
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearchLocation } from "@fortawesome/free-solid-svg-icons";
 
 const SearchBox = (props) => {
   SearchBox.propTypes = {
@@ -36,10 +34,6 @@ const SearchBox = (props) => {
   }
   return (
     <form onSubmit={handleSubmit} className="search-box">
-      <h1 className="title-search green-tea">
-        Tìm kiếm sản phẩm trên bản đồ
-        <FontAwesomeIcon className="title-icon" icon={faSearchLocation} />
-      </h1>
       <input
         type="text"
         placeholder="Tìm kiếm"

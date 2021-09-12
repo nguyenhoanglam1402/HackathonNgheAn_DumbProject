@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.product-cards {
+  border-bottom: 3px dashed var(--green-tea);
+  margin: var(--container-margin);
+}
+.product-cat-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: transparent;
+  margin: var(--container-margin);
+}
+.product-cat-title {
+  margin: auto;
+  width: fit-content;
+  color: var(--green-tea);
+}
