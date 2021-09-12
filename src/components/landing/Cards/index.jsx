@@ -22,7 +22,7 @@ const Cards = () => {
   return (
     <div className="card-block">
       <h1 className="title-block">
-        Nông sản hiện có
+        Nông sản hiện có
         <FontAwesomeIcon className="title-icon" icon={faCarrot} />
       </h1>
 
