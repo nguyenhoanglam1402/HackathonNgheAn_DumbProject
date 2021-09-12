@@ -24,7 +24,7 @@ const Posts = () => {
       </h1>
       <div className="post-item-block">
         {newsfeed.map((item, index) => {
-          console.log(item.uid);
+          console.log(item.price);
           return (
             <PostItem
               name={item.author}

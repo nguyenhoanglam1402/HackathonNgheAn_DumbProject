@@ -31,7 +31,7 @@ const PostItem = (props) => {
           <FontAwesomeIcon className="prize-connect-icon" icon={faCoins} />
           <div>
             <p className="price-tag">
-              {props.prize ? (
+              {props.price ? (
                 <NumberFormat
                   value={props.price}
                   displayType="text"
